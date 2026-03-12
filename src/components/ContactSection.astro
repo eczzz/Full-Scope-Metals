@@ -94,7 +94,8 @@
               <input type="text" name="subject" placeholder="Subject*" required />
             </div>
             <div class="form-field form-field-full">
-              <textarea name="message" placeholder="Message*&#10;Tell us about your project, materials needed, or timeline." rows="4" required></textarea>
+              <span class="textarea-label">Message*</span>
+              <textarea name="message" placeholder="Tell us about your project, materials needed, or timeline." rows="4" required></textarea>
             </div>
           </div>
 
@@ -338,8 +339,7 @@
     transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
-  .form-field input::placeholder,
-  .form-field textarea::placeholder {
+  .form-field input::placeholder {
     font-family: var(--font-heading);
     font-size: 20px;
     font-weight: 500;
@@ -347,7 +347,34 @@
     transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
+  .textarea-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-muted);
+    padding: 12px 0 0;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .form-field:hover .textarea-label {
+    color: var(--blue-primary);
+  }
+
+  .form-field textarea::placeholder {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white-muted);
+    line-height: 150%;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
   .form-field textarea {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 150%;
     border-top: none;
     border-bottom: 1px solid rgba(232, 232, 232, 0.5);
     padding: 8px 0 12px;
@@ -510,6 +537,16 @@
     .banner-labels {
       width: 100%;
       max-width: 300px;
+      justify-content: flex-start;
+      margin: 0 0 8px;
+    }
+
+    .banner-center {
+      text-align: left;
+    }
+
+    .banner-label:last-child {
+      display: none;
     }
 
     .banner-label {
