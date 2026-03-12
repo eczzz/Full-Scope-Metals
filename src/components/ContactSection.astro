@@ -1,0 +1,639 @@
+---
+
+---
+
+<section class="contact-section">
+  <div class="contact-inner">
+    <!-- CTA Banner -->
+    <div class="cta-banner scroll-reveal">
+      <div class="banner-img banner-img-left">
+        <div class="banner-accent"></div>
+        <img
+          src="/full-scope-metals-contact-1.webp"
+          alt="Colorado road with mountains"
+          width="219"
+          height="164"
+        />
+      </div>
+
+      <div class="banner-center">
+        <div class="banner-labels">
+          <span class="banner-label">Get Started</span>
+          <span class="banner-label">Get Started</span>
+        </div>
+        <h2 class="banner-headline">Let's Build Something That Lasts.</h2>
+      </div>
+
+      <div class="banner-img banner-img-right">
+        <div class="banner-accent"></div>
+        <img
+          src="/full-scope-metals-contact-2.webp"
+          alt="Metal roofing facility"
+          width="219"
+          height="164"
+        />
+      </div>
+    </div>
+
+    <!-- Two Column Row -->
+    <div class="contact-row">
+      <!-- Left: Contact Info Card -->
+      <div class="contact-card scroll-reveal" style="--delay: 0.1s">
+        <h3 class="card-heading">Get in Touch With Us</h3>
+
+        <div class="info-row">
+          <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81 19.79 19.79 0 01.12 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="#E8E8E8" stroke-width="2"/>
+          </svg>
+          <div class="info-text">
+            <span class="info-label">Phone</span>
+            <a href="tel:9702812982" class="info-value">(970) 281-2982</a>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" stroke="#E8E8E8" stroke-width="2"/>
+            <circle cx="12" cy="10" r="3" stroke="#E8E8E8" stroke-width="2"/>
+          </svg>
+          <div class="info-text">
+            <span class="info-label">Location</span>
+            <p class="info-value">5871 Co Hwy 22<br />Kremmling, CO 80459</p>
+          </div>
+        </div>
+
+        <div class="info-row">
+          <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="#E8E8E8" stroke-width="2"/>
+            <path d="M12 6v6l4 2" stroke="#E8E8E8" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <div class="info-text">
+            <span class="info-label">Hours</span>
+            <p class="info-value">Mon - Sat: 7:30A - 5:30P<br />Sun: Closed</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Quote Form -->
+      <div class="form-col scroll-reveal" style="--delay: 0.2s">
+        <h2 class="form-heading">Get a Quote</h2>
+
+        <form method="POST" action="#" class="quote-form">
+          <div style="height: 4rem;"></div>
+          <div class="form-grid">
+            <div class="form-field">
+              <input type="text" name="full_name" placeholder="Full Name*" required />
+            </div>
+            <div class="form-field">
+              <input type="email" name="email" placeholder="Email Address*" required />
+            </div>
+            <div class="form-field">
+              <input type="tel" name="phone" placeholder="Phone Number*" required />
+            </div>
+            <div class="form-field">
+              <input type="text" name="subject" placeholder="Subject*" required />
+            </div>
+            <div class="form-field form-field-full">
+              <textarea name="message" placeholder="Message*&#10;Tell us about your project, materials needed, or timeline." rows="4" required></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn">Get a Quote</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact-section {
+    background: var(--bg);
+    padding: 80px 0;
+    overflow: hidden;
+  }
+
+  .contact-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+
+  /* CTA Banner */
+  .cta-banner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    margin-bottom: 60px;
+  }
+
+  .banner-img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .banner-img-left {
+    left: 0;
+  }
+
+  .banner-img-right {
+    right: 0;
+  }
+
+  .banner-img {
+    overflow: hidden;
+  }
+
+  .banner-img img {
+    width: 219px;
+    height: 164px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .banner-img:hover img {
+    transform: scale(1.05);
+  }
+
+  .banner-accent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 18px;
+    background: var(--blue-primary);
+    z-index: 1;
+  }
+
+  .banner-center {
+    text-align: center;
+    max-width: 831px;
+  }
+
+  .banner-labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 680px;
+    margin: 0 auto 8px;
+  }
+
+  .banner-label {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .banner-headline {
+    font-family: var(--font-heading);
+    font-size: clamp(28px, 5.7vw, 82px);
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 110%;
+  }
+
+  /* Contact Row */
+  .contact-row {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+  }
+
+  /* Contact Card */
+  .contact-card {
+    width: 526px;
+    max-width: 100%;
+    flex-shrink: 0;
+    border: 1px solid var(--white);
+    padding: 80px 40px 103px;
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .contact-card:hover {
+    border-color: var(--blue-primary);
+    box-shadow: 0 0 30px rgba(36, 93, 167, 0.2);
+  }
+
+  .card-heading {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 40px;
+  }
+
+  .info-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 32px;
+  }
+
+  .info-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .info-icon {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .info-label {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .info-value {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 125%;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .info-value a {
+    color: var(--white);
+    text-decoration: none;
+    display: block;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .info-label {
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .info-icon path,
+  .info-icon circle {
+    transition: stroke 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .info-row:hover .info-label {
+    color: var(--blue-primary);
+  }
+
+  .info-row:hover .info-value,
+  .info-row:hover .info-value a {
+    color: var(--blue-primary);
+  }
+
+  .info-row:hover .info-icon path,
+  .info-row:hover .info-icon circle {
+    stroke: #245DA7;
+  }
+
+  /* Form Column */
+  .form-col {
+    flex: 1;
+  }
+
+  .form-heading {
+    font-family: var(--font-heading);
+    font-size: 90px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 100%;
+    margin-bottom: 40px;
+  }
+
+  .quote-form {
+    margin-top: 4rem;
+  }
+
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+  }
+
+  .form-field-full {
+    grid-column: 1 / -1;
+  }
+
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-top: 1px solid rgba(232, 232, 232, 0.5);
+    padding: 12px 0 8px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-full);
+    outline: none;
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .form-field input::placeholder,
+  .form-field textarea::placeholder {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-muted);
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .form-field textarea {
+    border-top: none;
+    border-bottom: 1px solid rgba(232, 232, 232, 0.5);
+    padding: 8px 0 12px;
+  }
+
+  .form-field:hover input,
+  .form-field:hover textarea {
+    border-top-color: var(--blue-primary);
+    color: var(--blue-primary);
+  }
+
+  .form-field:hover input::placeholder,
+  .form-field:hover textarea::placeholder {
+    color: var(--blue-primary);
+  }
+
+  .form-field:hover textarea {
+    border-top-color: transparent;
+    border-bottom-color: var(--blue-primary);
+  }
+
+  .form-field input:focus,
+  .form-field textarea:focus {
+    border-top-color: var(--blue-primary);
+  }
+
+  .form-field textarea:focus {
+    border-top-color: transparent;
+    border-bottom-color: var(--blue-primary);
+  }
+
+  .form-field input:focus::placeholder,
+  .form-field textarea:focus::placeholder {
+    color: var(--blue-primary);
+  }
+
+  .form-field textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    margin-top: 24px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--white);
+    padding: 16px 26px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--white);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .submit-btn:hover {
+    color: var(--bg);
+  }
+
+  .submit-btn:hover::before {
+    width: 100%;
+  }
+
+  /* 1400px */
+  @media (max-width: 1400px) {
+    .contact-inner {
+      padding: 0 60px;
+    }
+
+    .cta-banner {
+      padding: 0 clamp(120px, 14vw, 200px);
+    }
+
+    .banner-labels {
+      width: 100%;
+      max-width: 580px;
+    }
+
+    .banner-img img {
+      width: clamp(100px, 12vw, 180px);
+      height: auto;
+      aspect-ratio: 219 / 164;
+    }
+
+    .contact-card {
+      width: 460px;
+    }
+
+    .form-heading {
+      font-size: 72px;
+    }
+  }
+
+  /* 1024px */
+  @media (max-width: 1024px) {
+    .contact-section {
+      padding: 64px 0;
+    }
+
+    .contact-inner {
+      padding: 0 40px;
+    }
+
+    .banner-img {
+      display: none;
+    }
+
+    .cta-banner {
+      padding: 0;
+      min-height: auto;
+    }
+
+    .banner-labels {
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .contact-card {
+      width: 380px;
+    }
+
+    .form-heading {
+      font-size: 56px;
+    }
+
+    .info-value {
+      font-size: 20px;
+    }
+  }
+
+  /* 768px */
+  @media (max-width: 768px) {
+    .contact-section {
+      padding: 48px 0;
+    }
+
+    .contact-inner {
+      padding: 0 24px;
+    }
+
+    .banner-headline {
+      font-size: 36px;
+    }
+
+    .banner-labels {
+      width: 100%;
+      max-width: 300px;
+    }
+
+    .banner-label {
+      font-size: 16px;
+    }
+
+    .cta-banner {
+      margin-bottom: 40px;
+    }
+
+    .contact-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 40px;
+    }
+
+    .contact-card {
+      width: 100%;
+      padding: 32px 24px;
+    }
+
+    .card-heading {
+      font-size: 26px;
+      margin-bottom: 28px;
+    }
+
+    .form-heading {
+      font-size: 42px;
+      margin-bottom: 28px;
+    }
+
+    .form-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      font-size: 18px;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      font-size: 18px;
+    }
+
+    .info-value {
+      font-size: 18px;
+    }
+
+    .submit-btn {
+      font-size: 18px;
+      padding: 14px 24px;
+    }
+  }
+
+  /* 480px */
+  @media (max-width: 480px) {
+    .contact-section {
+      padding: 40px 0;
+    }
+
+    .contact-inner {
+      padding: 0 16px;
+    }
+
+    .banner-headline {
+      font-size: 28px;
+    }
+
+    .banner-labels {
+      max-width: 240px;
+    }
+
+    .banner-label {
+      font-size: 14px;
+    }
+
+    .cta-banner {
+      margin-bottom: 32px;
+    }
+
+    .contact-row {
+      gap: 32px;
+    }
+
+    .contact-card {
+      padding: 24px 16px;
+    }
+
+    .card-heading {
+      font-size: 22px;
+      margin-bottom: 24px;
+    }
+
+    .form-heading {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .form-field input,
+    .form-field textarea {
+      font-size: 16px;
+    }
+
+    .form-field input::placeholder,
+    .form-field textarea::placeholder {
+      font-size: 16px;
+    }
+
+    .info-value {
+      font-size: 16px;
+    }
+
+    .info-label {
+      font-size: 13px;
+    }
+
+    .submit-btn {
+      font-size: 16px;
+      padding: 12px 20px;
+    }
+
+    .quote-form {
+      margin-top: 2rem;
+    }
+  }
+</style>

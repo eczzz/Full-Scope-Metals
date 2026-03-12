@@ -1,0 +1,311 @@
+---
+
+---
+
+<footer class="footer">
+  <div class="footer-inner">
+    <!-- Top Row -->
+    <div class="top-row">
+      <!-- Left Column -->
+      <div class="left-col scroll-reveal">
+        <img
+          src="/Full-Scope-Metals-logo.webp"
+          alt="Full Scope Metals"
+          class="footer-logo"
+          width="127"
+          height="69"
+        />
+        <h2 class="tagline">Metal Roofing Products Built for the Field.</h2>
+        <p class="subtext">Custom fabrication and distribution out of Kremmling, Colorado.</p>
+      </div>
+
+      <!-- Right Column -->
+      <div class="right-col scroll-reveal" style="--delay: 0.15s">
+        <div class="footer-img-wrapper">
+          <div class="accent-square accent-square-tl"></div>
+          <img
+            src="/full-scope-metals-footer.webp"
+            alt="Full Scope Metals"
+            width="172"
+            height="218"
+          />
+          <div class="accent-square accent-square-br"></div>
+        </div>
+
+        <nav class="footer-nav">
+          <a href="/" class="nav-row">
+            <span class="nav-link">Home</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4V14" stroke="#E8E8E8" stroke-width="1.5"/></svg>
+          </a>
+          <a href="/about" class="nav-row">
+            <span class="nav-link">About</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4V14" stroke="#E8E8E8" stroke-width="1.5"/></svg>
+          </a>
+          <a href="/products" class="nav-row">
+            <span class="nav-link">Products</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4V14" stroke="#E8E8E8" stroke-width="1.5"/></svg>
+          </a>
+          <a href="/projects" class="nav-row">
+            <span class="nav-link">Projects</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4V14" stroke="#E8E8E8" stroke-width="1.5"/></svg>
+          </a>
+          <a href="/contact" class="nav-row">
+            <span class="nav-link">Contact</span>
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4V14" stroke="#E8E8E8" stroke-width="1.5"/></svg>
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <!-- Wordmark -->
+    <p class="wordmark scroll-reveal" style="--delay: 0.3s">Full Scope Metals</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--bg);
+    padding: 80px 0 0;
+  }
+
+  .footer-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+
+  /* Top Row */
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  /* Left Column */
+  .left-col {
+    max-width: 502px;
+  }
+
+  .footer-logo {
+    display: block;
+    margin-bottom: 32px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+  }
+
+  .footer-logo:hover {
+    transform: scale(1.05);
+    filter: brightness(1.15);
+  }
+
+  .tagline {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 110%;
+    margin-bottom: 20px;
+  }
+
+  .subtext {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 150%;
+    max-width: 500px;
+  }
+
+  /* Right Column */
+  .right-col {
+    position: relative;
+    width: 420px;
+    flex-shrink: 0;
+  }
+
+  /* Footer Image */
+  .footer-img-wrapper {
+    position: absolute;
+    top: 2.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 172px;
+    height: 233px;
+    z-index: 3;
+    overflow: hidden;
+  }
+
+  .footer-img-wrapper img {
+    width: 172px;
+    height: 233px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .footer-img-wrapper:hover img {
+    transform: scale(1.05);
+  }
+
+  .accent-square {
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: var(--blue-primary);
+    z-index: 2;
+  }
+
+  .accent-square-tl {
+    top: 0;
+    left: 0;
+  }
+
+  .accent-square-br {
+    bottom: 0;
+    right: 0;
+  }
+
+  /* Footer Nav */
+  .footer-nav {
+    position: relative;
+    z-index: 2;
+  }
+
+  .nav-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--white);
+    text-decoration: none;
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .nav-row:hover {
+    border-bottom-color: var(--blue-primary);
+  }
+
+  .nav-row:hover .nav-link {
+    color: var(--blue-primary);
+  }
+
+  .nav-row:hover svg path {
+    stroke: #245DA7;
+  }
+
+  .nav-row svg {
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .nav-row:hover svg {
+    transform: translate(3px, -3px);
+  }
+
+  .nav-link {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-muted);
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .nav-row svg path {
+    transition: stroke 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  /* Wordmark */
+  .wordmark {
+    font-family: var(--font-heading);
+    font-size: 150px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 160%;
+    margin-top: 60px;
+    white-space: nowrap;
+    letter-spacing: 0;
+    transition: letter-spacing 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.4s ease;
+    background: linear-gradient(90deg, var(--blue-accent), var(--white));
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: var(--white);
+    transition: letter-spacing 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), background-position 0.6s ease, -webkit-text-fill-color 0.6s ease;
+  }
+
+  .wordmark:hover {
+    letter-spacing: 8px;
+    background-position: 0 0;
+    -webkit-text-fill-color: transparent;
+  }
+
+  /* Tablet */
+  @media (max-width: 1024px) {
+    .footer-inner {
+      padding: 0 48px;
+    }
+
+    .tagline {
+      font-size: 36px;
+    }
+
+    .right-col {
+      width: 320px;
+    }
+
+    .footer-img-wrapper {
+      right: 140px;
+      width: 140px;
+      height: 178px;
+    }
+
+    .footer-img-wrapper img {
+      width: 140px;
+      height: 178px;
+    }
+
+    .wordmark {
+      font-size: 100px;
+    }
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .footer {
+      padding: 48px 0 0;
+    }
+
+    .footer-inner {
+      padding: 0 24px;
+    }
+
+    .top-row {
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    .tagline {
+      font-size: 32px;
+    }
+
+    .subtext {
+      font-size: 16px;
+    }
+
+    .right-col {
+      width: 100%;
+    }
+
+    .footer-img-wrapper {
+      display: none;
+    }
+
+    .wordmark {
+      font-size: 60px;
+      white-space: normal;
+    }
+  }
+</style>

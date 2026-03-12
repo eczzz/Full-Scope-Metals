@@ -1,0 +1,493 @@
+---
+
+---
+
+<section class="by-the-numbers">
+  <div class="btn-inner">
+    <!-- Top Row -->
+    <div class="top-row">
+      <div class="top-left scroll-reveal">
+        <div class="accent-text-row">
+          <div class="accent-bar-vertical"></div>
+          <p class="sub-text">Every project is custom.<br />Every panel is fabricated in-house.</p>
+        </div>
+        <a href="/projects" class="view-projects-btn">View All Projects</a>
+      </div>
+
+      <div class="top-right scroll-reveal" style="--delay: 0.15s">
+        <p class="section-label">By The Numbers</p>
+        <h2 class="section-headline">Built to Last. Built to Spec. Why Full Scope Metals.</h2>
+      </div>
+    </div>
+
+    <!-- Stats Grid -->
+    <div class="stats-grid">
+      <!-- Column 1 -->
+      <div class="stat-col stat-top scroll-reveal" style="--delay: 0.1s">
+        <span class="stat-label">No 01</span>
+        <div class="image-wrapper">
+          <div class="accent-strip accent-strip-top"></div>
+          <img
+            src="/full-scope-metals-colorado.webp"
+            alt="Colorado Born and Built"
+            width="271"
+            height="270"
+          />
+        </div>
+        <div class="stat-info">
+          <h3 class="stat-title">Colorado Born and Built</h3>
+          <p class="stat-value">Est. 2024</p>
+        </div>
+      </div>
+
+      <!-- Column 2 -->
+      <div class="stat-col stat-stagger scroll-reveal" style="--delay: 0.2s">
+        <span class="stat-label">No 02</span>
+        <div class="image-wrapper">
+          <img
+            src="/full-scope-metals-orders.webp"
+            alt="Custom Fabricated Orders"
+            width="271"
+            height="270"
+          />
+          <div class="accent-strip accent-strip-bottom"></div>
+        </div>
+        <div class="stat-info">
+          <h3 class="stat-title" style="white-space: nowrap;">Custom Fabricated Orders</h3>
+          <p class="stat-value">100%</p>
+        </div>
+      </div>
+
+      <!-- Column 3 -->
+      <div class="stat-col stat-top scroll-reveal" style="--delay: 0.3s">
+        <span class="stat-label">No 03</span>
+        <div class="image-wrapper">
+          <div class="accent-strip accent-strip-top"></div>
+          <img
+            src="/full-scope-metals-products.webp"
+            alt="Product Categories In Stock"
+            width="271"
+            height="270"
+          />
+        </div>
+        <div class="stat-info">
+          <h3 class="stat-title">Product Categories in Stock</h3>
+          <p class="stat-value">6+</p>
+        </div>
+      </div>
+
+      <!-- Column 4 -->
+      <div class="stat-col stat-stagger scroll-reveal" style="--delay: 0.4s">
+        <span class="stat-label">No 04</span>
+        <div class="image-wrapper">
+          <img
+            src="/full-scope-metals-turnaround.webp"
+            alt="Average Turnaround Time"
+            width="271"
+            height="270"
+          />
+          <div class="accent-strip accent-strip-bottom"></div>
+        </div>
+        <div class="stat-info">
+          <h3 class="stat-title">Average Turnaround Time</h3>
+          <p class="stat-value">5 Days</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .by-the-numbers {
+    background: var(--bg);
+    padding: 80px 0;
+    overflow: hidden;
+  }
+
+  .btn-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+
+  /* Top Row */
+  .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  .top-left {
+    max-width: 420px;
+    flex-shrink: 0;
+  }
+
+  .accent-text-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .accent-bar-vertical {
+    width: 2px;
+    height: 27px;
+    background: var(--blue-primary);
+    flex-shrink: 0;
+    margin-top: 4px;
+    transition: background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .sub-text {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 150%;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .accent-text-row:hover .accent-bar-vertical {
+    background: var(--blue-accent);
+    height: 35px;
+  }
+
+  .accent-text-row:hover .sub-text {
+    color: var(--white-full);
+  }
+
+  .view-projects-btn {
+    display: inline-block;
+    margin-top: 32px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+    color: var(--white);
+    border: 1px solid var(--white);
+    background: transparent;
+    padding: 16px 35px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .view-projects-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--white);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .view-projects-btn:hover {
+    color: var(--bg);
+  }
+
+  .view-projects-btn:hover::before {
+    width: 100%;
+  }
+
+  .top-right {
+    max-width: 813px;
+  }
+
+  .section-label {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 16px;
+  }
+
+  .section-headline {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 110%;
+  }
+
+  /* Stats Grid */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 80px;
+  }
+
+  .stat-col {
+    padding: 0 32px;
+    border-right: 1px solid var(--white);
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .stat-col:hover {
+    transform: translateY(-6px);
+  }
+
+  .stat-col:first-child {
+    padding-left: 0;
+  }
+
+  .stat-col:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+
+  .stat-stagger {
+    padding-top: 140px;
+  }
+
+  .stat-label {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    display: block;
+    margin-bottom: 12px;
+  }
+
+  .image-wrapper {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+
+  .image-wrapper img {
+    width: 100%;
+    height: 270px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .image-wrapper:hover img {
+    transform: scale(1.05);
+  }
+
+  .accent-strip {
+    position: absolute;
+    left: 0;
+    width: 92px;
+    height: 16px;
+    background: var(--blue-primary);
+    z-index: 1;
+    transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .stat-col:hover .accent-strip {
+    width: 100%;
+  }
+
+  .accent-strip-top {
+    top: 0;
+  }
+
+  .accent-strip-bottom {
+    bottom: 0;
+  }
+
+  .stat-info {
+    margin-top: 20px;
+  }
+
+  .stat-title {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .stat-value {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white);
+    margin-top: 4px;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .stat-col:hover .stat-value {
+    color: var(--blue-accent);
+  }
+
+  /* 1200px */
+  @media (max-width: 1200px) {
+    .btn-inner {
+      padding: 0 60px;
+    }
+
+    .section-headline {
+      font-size: 60px;
+    }
+  }
+
+  /* 1024px */
+  @media (max-width: 1024px) {
+    .by-the-numbers {
+      padding: 64px 0;
+    }
+
+    .btn-inner {
+      padding: 0 40px;
+    }
+
+    .top-row {
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .top-left {
+      max-width: 100%;
+    }
+
+    .section-headline {
+      font-size: 48px;
+    }
+
+    .stats-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 0;
+    }
+
+    .stat-stagger {
+      padding-top: 0;
+    }
+
+    .stat-col:nth-child(2) {
+      border-right: none;
+    }
+
+    .stat-col:nth-child(3) {
+      border-right: 1px solid var(--white);
+    }
+  }
+
+  /* 768px */
+  @media (max-width: 768px) {
+    .by-the-numbers {
+      padding: 48px 0;
+    }
+
+    .btn-inner {
+      padding: 0 24px;
+    }
+
+    .section-label {
+      font-size: 18px;
+    }
+
+    .section-headline {
+      font-size: 36px;
+    }
+
+    .sub-text {
+      font-size: 16px;
+    }
+
+    .view-projects-btn {
+      font-size: 16px;
+      padding: 14px 28px;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 40px 0;
+      margin-top: 48px;
+    }
+
+    .stat-col:nth-child(2) {
+      border-right: none;
+    }
+
+    .stat-col:nth-child(3) {
+      border-right: 1px solid var(--white);
+    }
+
+    .stat-label {
+      font-size: 20px;
+    }
+
+    .stat-title {
+      font-size: 20px;
+    }
+
+    .stat-value {
+      font-size: 18px;
+    }
+
+    .image-wrapper img {
+      height: 200px;
+    }
+  }
+
+  /* 480px */
+  @media (max-width: 480px) {
+    .by-the-numbers {
+      padding: 40px 0;
+    }
+
+    .btn-inner {
+      padding: 0 16px;
+    }
+
+    .section-label {
+      font-size: 16px;
+      margin-bottom: 12px;
+    }
+
+    .section-headline {
+      font-size: 28px;
+    }
+
+    .sub-text {
+      font-size: 14px;
+    }
+
+    .view-projects-btn {
+      font-size: 14px;
+      padding: 12px 24px;
+    }
+
+    .stats-grid {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      margin-top: 40px;
+    }
+
+    .stat-col {
+      padding: 0;
+      border-right: none;
+    }
+
+    .stat-col:nth-child(3) {
+      border-right: none;
+    }
+
+    .stat-label {
+      font-size: 18px;
+    }
+
+    .stat-title {
+      font-size: 18px;
+    }
+
+    .stat-value {
+      font-size: 16px;
+    }
+
+    .image-wrapper img {
+      height: 180px;
+    }
+  }
+</style>
