@@ -53,8 +53,8 @@
           <div class="accent-strip accent-strip-bottom"></div>
         </div>
         <div class="stat-info">
-          <h3 class="stat-title" style="white-space: nowrap;">Custom Fabricated Orders</h3>
-          <p class="stat-value">100%</p>
+          <h3 class="stat-title" style="white-space: nowrap;">Custom Orders</h3>
+          <p class="stat-value">No Off-The-Shelf.</p>
         </div>
       </div>
 
@@ -493,6 +493,28 @@
 
     .image-wrapper img {
       height: 180px;
+    }
+  }
+
+  /* Mobile: accent-strip entry animation — expand on scroll reveal */
+  @media (max-width: 768px) {
+    @keyframes stripExpand {
+      from {
+        width: 92px;
+      }
+      to {
+        width: 100%;
+      }
+    }
+
+    .accent-strip {
+      width: 92px;
+      transition: none;
+    }
+
+    .scroll-reveal.revealed .accent-strip {
+      animation: stripExpand 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+      animation-delay: 0.2s;
     }
   }
 </style>

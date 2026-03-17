@@ -44,3 +44,30 @@ img {
   opacity: 1;
   transform: none;
 }
+
+/* ===== Mobile: Dark-blue arrows by default, black on active/click ===== */
+@media (max-width: 768px) {
+  /* Who We Are cards */
+  .who-we-are .card-arrow path {
+    stroke: var(--blue-primary);
+  }
+  .who-we-are .card:active .card-arrow path {
+    stroke: var(--black);
+  }
+
+  /* Products cards */
+  .products .card-arrow path {
+    stroke: var(--blue-primary);
+  }
+  .products .card:active .card-arrow path {
+    stroke: var(--black);
+  }
+
+  /* Footer nav arrows */
+  .footer .nav-row svg path {
+    stroke: var(--blue-primary);
+  }
+  .footer .nav-row:active svg path {
+    stroke: var(--black);
+  }
+}
