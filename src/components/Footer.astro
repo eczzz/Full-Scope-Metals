@@ -306,6 +306,16 @@
     .wordmark {
       font-size: 60px;
       white-space: normal;
+      background: none;
+      -webkit-background-clip: unset;
+      background-clip: unset;
+      -webkit-text-fill-color: var(--blue-primary);
+      color: var(--blue-primary);
+    }
+
+    .wordmark:hover {
+      -webkit-text-fill-color: var(--blue-accent);
+      color: var(--blue-accent);
     }
   }
 </style>
