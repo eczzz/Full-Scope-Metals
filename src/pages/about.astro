@@ -1,0 +1,1417 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="About — Full Scope Metals">
+  <Header />
+
+  <main>
+    <!-- Hero Section -->
+    <section class="about-hero">
+      <div class="about-hero-inner">
+
+        <!-- Text Column -->
+        <div class="hero-text-col">
+          <p class="tagline hero-fade-up" style="--hero-delay: 0.15s">Who We Are</p>
+
+          <h1 class="hero-headline hero-fade-up" style="--hero-delay: 0.35s">
+            Built by Someone Who's Been on Your Side of the Job.
+          </h1>
+
+          <div class="hero-body-row hero-fade-up" style="--hero-delay: 0.55s">
+            <div class="accent-line"></div>
+            <p class="hero-body">
+              Full Scope Metals was founded by a metal roofing contractor who got tired of suppliers that didn't understand urgency, quality, or what it takes to finish a job.
+            </p>
+          </div>
+
+          <div class="hero-cta-row hero-fade-up" style="--hero-delay: 0.7s">
+            <a href="/products" class="cta-outline">See Products</a>
+            <a href="/products" class="cta-arrow" aria-label="See products">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Image Column -->
+        <div class="hero-image-col hero-fade-up" style="--hero-delay: 0.5s">
+          <div class="hero-image-wrap">
+            <img
+              src="/about-us-hero-image.webp"
+              alt="Full Scope Metals founder on a metal roofing job site"
+              class="hero-image"
+              width="1200"
+              height="1798"
+            />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Blue divider beneath hero -->
+      <div class="hero-divider"></div>
+    </section>
+
+    <!-- Our Story Section -->
+    <section class="our-story">
+      <div class="our-story-inner">
+
+        <!-- Image Column -->
+        <div class="story-image-col scroll-reveal" style="--delay: 0.1s">
+          <span class="story-number">Est. 2024</span>
+          <div class="story-image-wrapper">
+            <div class="story-accent-strip"></div>
+            <img
+              src="/our-story-image.webp"
+              alt="Matt Johnson at the Full Scope Metals fabrication shop"
+              class="story-image"
+              width="768"
+              height="1199"
+            />
+          </div>
+        </div>
+
+        <!-- Text Column -->
+        <div class="story-text-col">
+          <p class="tagline scroll-reveal" style="--delay: 0.15s">Our Story</p>
+
+          <h2 class="story-headline scroll-reveal" style="--delay: 0.25s">
+            From the Roof to the Shop.
+          </h2>
+
+          <h3 class="story-subheadline scroll-reveal" style="--delay: 0.35s">
+            A metal roofing contractor turned manufacturer.
+          </h3>
+
+          <div class="story-divider scroll-reveal" style="--delay: 0.4s"></div>
+
+          <div class="story-body-row scroll-reveal" style="--delay: 0.5s">
+            <div class="accent-line"></div>
+            <p class="story-body">
+              Matt Johnson built his career installing metal roofs across the region. After years of managing crews, meeting deadlines, and sourcing materials, he knew the supply side of the industry better than most. Full Scope Metals is the result. A fabrication shop built on firsthand experience, stocked with everything a metal roof needs, and run by someone who has actually used every product he sells.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Why We're Different Section -->
+    <section class="why-different">
+      <div class="why-different-inner">
+
+        <div class="why-different-header">
+          <p class="tagline scroll-reveal" style="--delay: 0.1s">Why We're Different</p>
+          <h2 class="why-different-headline scroll-reveal" style="--delay: 0.2s">
+            We Got Tired of the Old Way Too.
+          </h2>
+          <p class="why-different-sub scroll-reveal" style="--delay: 0.3s">
+            So we built something better.
+          </p>
+        </div>
+
+        <div class="comparison-table scroll-reveal" style="--delay: 0.4s">
+
+          <!-- Column Headers -->
+          <div class="comparison-headers">
+            <div class="col-header col-header--old">
+              <span class="col-header-label">The Old Way</span>
+            </div>
+            <div class="col-divider-header"></div>
+            <div class="col-header col-header--fsm">
+              <div class="col-header-accent"></div>
+              <span class="col-header-label">The Full Scope Way</span>
+            </div>
+          </div>
+
+          <!-- Row 01 -->
+          <div class="comparison-row scroll-reveal" style="--delay: 0.45s">
+            <div class="comparison-cell comparison-cell--old">
+              <span class="mobile-label mobile-label--old">The Old Way</span>
+              <span class="cell-text cell-text--old">Closed at noon on Fridays</span>
+            </div>
+            <div class="col-divider"></div>
+            <div class="comparison-cell comparison-cell--fsm">
+              <span class="mobile-label mobile-label--fsm">The Full Scope Way</span>
+              <span class="row-marker">01</span>
+              <span class="cell-text cell-text--fsm">Mon – Sat, 7:30 to 5:30</span>
+            </div>
+          </div>
+
+          <!-- Row 02 -->
+          <div class="comparison-row scroll-reveal" style="--delay: 0.55s">
+            <div class="comparison-cell comparison-cell--old">
+              <span class="mobile-label mobile-label--old">The Old Way</span>
+              <span class="cell-text cell-text--old">Two week lead times</span>
+            </div>
+            <div class="col-divider"></div>
+            <div class="comparison-cell comparison-cell--fsm">
+              <span class="mobile-label mobile-label--fsm">The Full Scope Way</span>
+              <span class="row-marker">02</span>
+              <span class="cell-text cell-text--fsm">Built and ready this week</span>
+            </div>
+          </div>
+
+          <!-- Row 03 -->
+          <div class="comparison-row scroll-reveal" style="--delay: 0.65s">
+            <div class="comparison-cell comparison-cell--old">
+              <span class="mobile-label mobile-label--old">The Old Way</span>
+              <span class="cell-text cell-text--old">Talking to a different rep every call</span>
+            </div>
+            <div class="col-divider"></div>
+            <div class="comparison-cell comparison-cell--fsm">
+              <span class="mobile-label mobile-label--fsm">The Full Scope Way</span>
+              <span class="row-marker">03</span>
+              <span class="cell-text cell-text--fsm">One team, every time</span>
+            </div>
+          </div>
+
+          <!-- Row 04 -->
+          <div class="comparison-row scroll-reveal" style="--delay: 0.75s">
+            <div class="comparison-cell comparison-cell--old">
+              <span class="mobile-label mobile-label--old">The Old Way</span>
+              <span class="cell-text cell-text--old">Suppliers who've never installed a roof</span>
+            </div>
+            <div class="col-divider"></div>
+            <div class="comparison-cell comparison-cell--fsm">
+              <span class="mobile-label mobile-label--fsm">The Full Scope Way</span>
+              <span class="row-marker">04</span>
+              <span class="cell-text cell-text--fsm">Founded by a metal roofing contractor</span>
+            </div>
+          </div>
+
+          <!-- Row 05 -->
+          <div class="comparison-row scroll-reveal" style="--delay: 0.85s">
+            <div class="comparison-cell comparison-cell--old">
+              <span class="mobile-label mobile-label--old">The Old Way</span>
+              <span class="cell-text cell-text--old">Off-the-shelf doesn't fit your project</span>
+            </div>
+            <div class="col-divider"></div>
+            <div class="comparison-cell comparison-cell--fsm">
+              <span class="mobile-label mobile-label--fsm">The Full Scope Way</span>
+              <span class="row-marker">05</span>
+              <span class="cell-text cell-text--fsm">100% custom to your spec</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Banner Section -->
+    <section class="cta-banner">
+      <div class="cta-banner-accent-top scroll-reveal"></div>
+      <div class="cta-banner-bg">
+        <div class="cta-banner-overlay"></div>
+        <div class="cta-banner-content">
+          <p class="tagline scroll-reveal" style="--delay: 0.1s">Get Started</p>
+
+          <h2 class="cta-banner-headline scroll-reveal" style="--delay: 0.2s">
+            Ready to Work With Us?
+          </h2>
+
+          <div class="cta-banner-body-row scroll-reveal" style="--delay: 0.35s">
+            <div class="accent-line"></div>
+            <p class="cta-banner-body">
+              We work with roofing contractors, general contractors, lumber yards, and property managers across the region. If you need metal roofing products built to spec and ready on time, we want to hear from you.
+            </p>
+          </div>
+
+          <div class="cta-banner-cta-row scroll-reveal" style="--delay: 0.5s">
+            <a href="/contact" class="cta-outline">Get a Quote</a>
+            <a href="/contact" class="cta-arrow" aria-label="Get a quote">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="cta-banner-accent-bottom scroll-reveal"></div>
+    </section>
+
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  /* ===========================
+     Hero Load Animations
+     =========================== */
+  @keyframes heroFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dividerExpand {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+  .hero-fade-up {
+    opacity: 0;
+    animation: heroFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: var(--hero-delay, 0s);
+  }
+
+  /* ===========================
+     Hero Layout
+     =========================== */
+  .about-hero {
+    background: var(--bg);
+    padding: 32px 0 0;
+  }
+
+  .about-hero-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    gap: 80px;
+    align-items: center;
+    min-height: 560px;
+  }
+
+  /* ===========================
+     Text Column
+     =========================== */
+  .hero-text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 60px;
+  }
+
+  /* Tagline */
+  .tagline {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  /* Headline */
+  .hero-headline {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 110%;
+    margin-bottom: 28px;
+    max-width: 680px;
+  }
+
+  /* Body Row with Accent Line */
+  .hero-body-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 44px;
+  }
+
+  .accent-line {
+    width: 2px;
+    height: 48px;
+    background: var(--blue-primary);
+    flex-shrink: 0;
+    margin-top: 4px;
+    transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .hero-body {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 150%;
+    max-width: 540px;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .hero-body-row:hover .accent-line {
+    background: var(--blue-accent);
+    height: 56px;
+  }
+
+  .hero-body-row:hover .hero-body {
+    color: var(--white-full);
+  }
+
+  /* CTA Row */
+  .hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-outline {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    border: 1px solid var(--white);
+    background: transparent;
+    padding: 16px 26px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--white);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-outline:hover {
+    color: var(--bg);
+  }
+
+  .cta-outline:hover::before {
+    width: 100%;
+  }
+
+  .cta-arrow {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 1px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .cta-arrow svg {
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-arrow:hover {
+    background: var(--blue-accent);
+    border-color: var(--blue-accent);
+    color: var(--black);
+  }
+
+  .cta-arrow:hover svg {
+    transform: translate(3px, -3px);
+  }
+
+  /* ===========================
+     Image Column
+     =========================== */
+  .hero-image-col {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .hero-image-wrap {
+    overflow: hidden;
+    border: 1px solid var(--white);
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .hero-image-wrap:hover {
+    border-color: var(--blue-primary);
+    box-shadow: 0 0 30px rgba(36, 93, 167, 0.2);
+  }
+
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    display: block;
+    max-height: 586px;
+  }
+
+  .story-image {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    max-height: 560px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .story-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid var(--white);
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .story-image-wrapper:hover {
+    border-color: var(--blue-primary);
+    box-shadow: 0 0 30px rgba(36, 93, 167, 0.2);
+  }
+
+  .story-image-wrapper:hover .story-image {
+    transform: scale(1.05);
+  }
+
+  /* ===========================
+     Hero Divider
+     =========================== */
+  .hero-divider {
+    width: 100%;
+    height: 18px;
+    background: var(--blue-primary);
+    margin-top: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: dividerExpand 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: 0.85s;
+  }
+
+  /* ===========================
+     Our Story Section
+     =========================== */
+  .our-story {
+    background: var(--bg);
+    padding: 120px 0;
+  }
+
+  .our-story-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 100px;
+    align-items: start;
+  }
+
+  .story-image-col {
+    padding-top: 0;
+  }
+
+  .story-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 1;
+    margin-bottom: 16px;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .story-image-col:hover .story-number {
+    color: var(--blue-accent);
+  }
+
+  .story-accent-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 16px;
+    background: var(--blue-primary);
+    z-index: 1;
+    transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .story-image-col:hover .story-accent-strip {
+    width: 100%;
+  }
+
+  .story-text-col {
+    padding-top: 80px;
+  }
+
+  .story-headline {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 110%;
+    margin-bottom: 20px;
+  }
+
+  .story-subheadline {
+    font-family: var(--font-body);
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--white-muted);
+    line-height: 140%;
+    margin-bottom: 32px;
+    padding-left: 4px;
+  }
+
+  .story-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--white);
+    margin-bottom: 36px;
+  }
+
+  .story-body-row {
+    display: flex;
+    align-items: stretch;
+    gap: 16px;
+  }
+
+  .story-body {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 170%;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .story-body-row .accent-line {
+    height: auto;
+    align-self: stretch;
+  }
+
+  .story-body-row:hover .accent-line {
+    background: var(--blue-accent);
+  }
+
+  .story-body-row:hover .story-body {
+    color: var(--white-full);
+  }
+
+  /* ===========================
+     Why We're Different Section
+     =========================== */
+  .why-different {
+    background: 
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(36, 93, 167, 0.08) 0%, transparent 70%),
+      radial-gradient(ellipse 50% 80% at 20% 80%, rgba(0, 162, 233, 0.04) 0%, transparent 60%),
+      var(--bg);
+    padding: 120px 0;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .why-different::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue-primary), transparent);
+  }
+
+  .why-different::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--blue-primary), transparent);
+  }
+
+  .why-different-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+
+  .why-different-header {
+    margin-bottom: 72px;
+  }
+
+  .why-different-headline {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 110%;
+    margin-bottom: 16px;
+    max-width: 800px;
+  }
+
+  .why-different-sub {
+    font-family: var(--font-body);
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--white-muted);
+    line-height: 150%;
+  }
+
+  /* Comparison Table */
+  .comparison-table {
+    position: relative;
+  }
+
+  /* Column Headers */
+  .comparison-headers {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 0;
+    margin-bottom: 0;
+  }
+
+  .col-header {
+    padding: 24px 32px;
+    position: relative;
+  }
+
+  .col-header--old .col-header-label {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--white-muted);
+    opacity: 0.5;
+  }
+
+  .col-header--fsm {
+    position: relative;
+  }
+
+  .col-header--fsm .col-header-label {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--blue-accent);
+  }
+
+  .col-header-accent {
+    position: absolute;
+    top: 0;
+    left: 32px;
+    width: 92px;
+    height: 16px;
+    background: var(--blue-primary);
+    transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .col-header--fsm:hover .col-header-accent {
+    width: calc(100% - 32px);
+  }
+
+  .col-divider-header {
+    width: 2px;
+    background: var(--blue-primary);
+  }
+
+  /* Comparison Rows */
+  .comparison-row {
+    display: grid;
+    grid-template-columns: 1fr 2px 1fr;
+    gap: 0;
+    border-top: 1px solid rgba(232, 232, 232, 0.08);
+    transition: background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .comparison-row:last-child {
+    border-bottom: 1px solid rgba(232, 232, 232, 0.08);
+  }
+
+  .comparison-row:hover {
+    background: rgba(232, 232, 232, 0.02);
+  }
+
+  .comparison-cell {
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .col-divider {
+    width: 2px;
+    background: var(--blue-primary);
+    transition: background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .comparison-row:hover .col-divider {
+    background: var(--blue-accent);
+  }
+
+  /* Old Way Cell */
+  .cell-text--old {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white-muted);
+    opacity: 0.5;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cell-text--old::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--white-muted);
+    transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .comparison-row:hover .cell-text--old {
+    opacity: 0.25;
+  }
+
+  .comparison-row:hover .cell-text--old::after {
+    width: 100%;
+  }
+
+  /* Full Scope Way Cell */
+  .row-marker {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--blue-primary);
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+    width: 24px;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .comparison-row:hover .row-marker {
+    color: var(--blue-accent);
+  }
+
+  .cell-text--fsm {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white);
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .comparison-row:hover .cell-text--fsm {
+    color: var(--white-full);
+  }
+
+  .comparison-row:hover .comparison-cell--fsm {
+    background: rgba(36, 93, 167, 0.06);
+  }
+
+  /* Mobile labels — hidden on desktop */
+  .mobile-label {
+    display: none;
+  }
+
+  /* ===========================
+     CTA Banner Section
+     =========================== */
+  .cta-banner {
+    position: relative;
+    width: 100%;
+  }
+
+  .cta-banner-accent-top {
+    width: 100%;
+    height: 16px;
+    background: var(--blue-primary);
+  }
+
+  .cta-banner-accent-bottom {
+    width: 100%;
+    height: 16px;
+    background: var(--blue-primary);
+  }
+
+  .cta-banner-bg {
+    position: relative;
+    background: url('/CTA-BANNER-BG.webp') center center / cover no-repeat;
+    width: 100%;
+  }
+
+  .cta-banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(23, 23, 23, 0.8);
+    pointer-events: none;
+  }
+
+  .cta-banner-content {
+    position: relative;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 100px 100px;
+    z-index: 1;
+  }
+
+  .cta-banner-headline {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 110%;
+    margin-bottom: 28px;
+    max-width: 700px;
+  }
+
+  .cta-banner-body-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 44px;
+    max-width: 680px;
+  }
+
+  .cta-banner-body {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 170%;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-banner-body-row:hover .accent-line {
+    background: var(--blue-accent);
+    height: 56px;
+  }
+
+  .cta-banner-body-row:hover .cta-banner-body {
+    color: var(--white-full);
+  }
+
+  .cta-banner-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  /* ===========================
+     Responsive — 1200px
+     =========================== */
+  @media (max-width: 1200px) {
+    .about-hero-inner {
+      padding: 0 80px;
+      gap: 60px;
+      grid-template-columns: 1fr 380px;
+    }
+
+    .hero-headline {
+      font-size: 60px;
+    }
+
+    .our-story-inner {
+      padding: 0 80px;
+      gap: 70px;
+      grid-template-columns: 360px 1fr;
+    }
+
+    .story-headline {
+      font-size: 60px;
+    }
+
+    .why-different-inner {
+      padding: 0 80px;
+    }
+
+    .why-different-headline {
+      font-size: 60px;
+    }
+
+    .cta-banner-content {
+      padding: 120px 80px;
+    }
+
+    .cta-banner-headline {
+      font-size: 60px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 1024px
+     =========================== */
+  @media (max-width: 1024px) {
+    .about-hero-inner {
+      padding: 0 48px;
+      gap: 48px;
+      grid-template-columns: 1fr 320px;
+      min-height: 480px;
+    }
+
+    .hero-headline {
+      font-size: 50px;
+    }
+
+    .hero-body {
+      font-size: 18px;
+    }
+
+    .our-story {
+      padding: 90px 0;
+    }
+
+    .our-story-inner {
+      padding: 0 48px;
+      gap: 48px;
+      grid-template-columns: 300px 1fr;
+    }
+
+    .story-headline {
+      font-size: 50px;
+    }
+
+    .story-subheadline {
+      font-size: 22px;
+    }
+
+    .story-body {
+      font-size: 17px;
+    }
+
+    .why-different {
+      padding: 90px 0;
+    }
+
+    .why-different-inner {
+      padding: 0 48px;
+    }
+
+    .why-different-headline {
+      font-size: 50px;
+    }
+
+    .why-different-sub {
+      font-size: 20px;
+    }
+
+    .cell-text--old,
+    .cell-text--fsm {
+      font-size: 17px;
+    }
+
+    .comparison-cell {
+      padding: 24px 28px;
+    }
+
+    .col-header {
+      padding: 20px 28px;
+    }
+
+    .cta-banner-content {
+      padding: 100px 48px;
+    }
+
+    .cta-banner-headline {
+      font-size: 50px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 768px
+     =========================== */
+  @media (max-width: 768px) {
+    .about-hero {
+      padding: 48px 0 0;
+    }
+
+    .about-hero-inner {
+      padding: 0 24px;
+      grid-template-columns: 1fr;
+      gap: 40px;
+      min-height: auto;
+    }
+
+    .hero-text-col {
+      padding: 0 0 8px;
+    }
+
+    .hero-headline {
+      font-size: 40px;
+      max-width: 100%;
+    }
+
+    .hero-body {
+      font-size: 16px;
+      max-width: 100%;
+      margin-bottom: 36px;
+    }
+
+    .hero-image-col {
+      justify-content: center;
+    }
+
+    .hero-image {
+      max-width: 340px;
+      margin: 0 auto;
+    }
+
+    .cta-outline {
+      font-size: 16px;
+      padding: 14px 20px;
+      height: 52px;
+    }
+
+    .cta-arrow {
+      width: 52px;
+      height: 52px;
+    }
+
+    .hero-divider {
+      height: 12px;
+    }
+
+    .hero-image-col {
+      padding-bottom: 16px;
+    }
+
+    .tagline {
+      font-size: 18px;
+    }
+
+    /* Story accent strip mobile entry animation */
+    @keyframes stripExpand {
+      from { width: 92px; }
+      to   { width: 100%; }
+    }
+
+    .story-accent-strip {
+      width: 92px;
+      transition: none;
+    }
+
+    .scroll-reveal.revealed .story-accent-strip {
+      animation: stripExpand 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+      animation-delay: 0.2s;
+    }
+
+    /* CTA banner accent strip entry animations */
+    @keyframes accentExpand {
+      from { transform: scaleX(0); }
+      to   { transform: scaleX(1); }
+    }
+
+    .cta-banner-accent-top,
+    .cta-banner-accent-bottom {
+      transform-origin: left;
+      transform: scaleX(0);
+    }
+
+    .cta-banner-accent-top.revealed,
+    .cta-banner-accent-bottom.revealed {
+      animation: accentExpand 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    }
+
+    .cta-banner-accent-bottom.revealed {
+      animation-delay: 0.15s;
+    }
+
+    .our-story {
+      padding: 72px 0;
+    }
+
+    .our-story-inner {
+      padding: 0 24px;
+      grid-template-columns: 1fr;
+      gap: 48px;
+    }
+
+    .story-image-col {
+      padding-top: 0;
+      order: -1;
+    }
+
+    .story-image-col .story-image {
+      max-width: 100%;
+      object-position: top;
+    }
+
+    .story-image-wrapper {
+      border: none;
+    }
+
+    .story-image-wrapper:hover {
+      border-color: transparent;
+    }
+
+    .story-number {
+      font-size: 20px;
+    }
+
+    .story-text-col {
+      padding-top: 0;
+    }
+
+    .story-headline {
+      font-size: 40px;
+    }
+
+    .story-subheadline {
+      font-size: 20px;
+      padding-left: 0;
+    }
+
+    .story-body {
+      font-size: 16px;
+      max-width: 100%;
+    }
+
+    .why-different {
+      padding: 72px 0;
+    }
+
+    .why-different-inner {
+      padding: 0 24px;
+    }
+
+    .why-different-headline {
+      font-size: 40px;
+    }
+
+    .why-different-header {
+      margin-bottom: 48px;
+    }
+
+    .why-different-sub {
+      font-size: 18px;
+    }
+
+    /* Mobile: paired cards — old way vs full scope per row */
+    .comparison-headers {
+      display: none;
+    }
+
+    .comparison-row {
+      grid-template-columns: 1fr;
+      gap: 0;
+      padding: 24px;
+      margin-bottom: 12px;
+      border: 1px solid rgba(232, 232, 232, 0.08);
+      border-top: none;
+    }
+
+    .comparison-row:last-child {
+      border-bottom: 1px solid rgba(232, 232, 232, 0.08);
+    }
+
+    .col-divider {
+      display: none;
+    }
+
+    .mobile-label {
+      display: block;
+      width: 100%;
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      margin-bottom: 4px;
+    }
+
+    .mobile-label--old {
+      color: var(--white-muted);
+      opacity: 0.4;
+    }
+
+    .mobile-label--fsm {
+      color: var(--blue-accent);
+    }
+
+    .comparison-cell--old {
+      padding: 0 0 16px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid rgba(232, 232, 232, 0.06);
+    }
+
+    .comparison-cell--fsm {
+      padding: 16px 0 0;
+      padding-left: 16px;
+      border-left: 3px solid var(--blue-primary);
+      flex-wrap: wrap;
+    }
+
+    .cell-text--old {
+      font-size: 15px;
+      opacity: 0.4;
+      text-decoration: line-through;
+      text-decoration-color: rgba(232, 232, 232, 0.3);
+    }
+
+    .cell-text--old::after {
+      display: none;
+    }
+
+    .cell-text--fsm {
+      font-size: 16px;
+      color: var(--white-full);
+    }
+
+    .row-marker {
+      display: none;
+    }
+
+    .cta-banner-content {
+      padding: 80px 24px;
+    }
+
+    .cta-banner-headline {
+      font-size: 40px;
+    }
+
+    .cta-banner-body {
+      font-size: 16px;
+    }
+
+    .cta-banner-accent-top,
+    .cta-banner-accent-bottom {
+      height: 12px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 480px
+     =========================== */
+  @media (max-width: 480px) {
+    .about-hero-inner {
+      padding: 0 16px;
+      gap: 32px;
+    }
+
+    .hero-headline {
+      font-size: 32px;
+    }
+
+    .hero-body {
+      font-size: 15px;
+      margin-bottom: 32px;
+    }
+
+    .hero-badge {
+      margin-bottom: 20px;
+    }
+
+    .hero-image {
+      max-width: 280px;
+    }
+
+    .tagline {
+      font-size: 16px;
+    }
+
+    .our-story {
+      padding: 56px 0;
+    }
+
+    .our-story-inner {
+      padding: 0 16px;
+      gap: 36px;
+    }
+
+    .story-number {
+      font-size: 18px;
+    }
+
+    .story-headline {
+      font-size: 32px;
+    }
+
+    .story-subheadline {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+
+    .story-divider {
+      margin-bottom: 28px;
+    }
+
+    .story-body {
+      font-size: 15px;
+    }
+
+    .why-different {
+      padding: 56px 0;
+    }
+
+    .why-different-inner {
+      padding: 0 16px;
+    }
+
+    .why-different-headline {
+      font-size: 32px;
+    }
+
+    .why-different-header {
+      margin-bottom: 40px;
+    }
+
+    .why-different-sub {
+      font-size: 16px;
+    }
+
+    .comparison-row {
+      padding: 20px 16px;
+      margin-bottom: 10px;
+    }
+
+    .cell-text--old {
+      font-size: 14px;
+    }
+
+    .cell-text--fsm {
+      font-size: 15px;
+    }
+
+    .cta-banner-content {
+      padding: 64px 16px;
+    }
+
+    .cta-banner-headline {
+      font-size: 32px;
+    }
+
+    .cta-banner-body {
+      font-size: 15px;
+    }
+
+    .cta-banner-body-row {
+      margin-bottom: 36px;
+    }
+
+    .cta-banner-accent-top,
+    .cta-banner-accent-bottom {
+      height: 10px;
+    }
+  }
+</style>
