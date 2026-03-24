@@ -24,12 +24,12 @@
 
       <div class="category-content">
         <h3 class="category-title">Roof Panels</h3>
-        <p class="category-desc">Custom standing seam and metal roof panels fabricated to your exact spec. Every panel rolls off our line in Kremmling — measured, cut, and formed for your job.</p>
+        <p class="category-desc">Custom standing seam and metal roof panels fabricated to your exact spec. Every panel rolls off our line measured, cut, and formed for your job.</p>
 
         <div class="spec-grid">
           <div class="spec-item">
             <span class="spec-marker"></span>
-            <span class="spec-text">Standing seam profiles — snap-lock & mechanical lock</span>
+            <span class="spec-text">Standing seam profiles: snap-lock & mechanical lock</span>
           </div>
           <div class="spec-item">
             <span class="spec-marker"></span>
@@ -76,7 +76,7 @@
 
       <div class="category-content">
         <h3 class="category-title">Wall Panels</h3>
-        <p class="category-desc">Durable metal wall panels built for commercial and residential applications. Same precision, same shop — matched to your roof system or standing on their own.</p>
+        <p class="category-desc">Durable metal wall panels built for commercial and residential applications. Same precision, same shop. Matched to your roof system or standing on their own.</p>
 
         <div class="spec-grid">
           <div class="spec-item">
@@ -128,7 +128,7 @@
 
       <div class="category-content">
         <h3 class="category-title">Trims & Flashing</h3>
-        <p class="category-desc">Every edge, transition, and termination point cut and bent in-house. If you can draw it, we can break it — custom profiles are our bread and butter.</p>
+        <p class="category-desc">Every edge, transition, and termination point cut and bent in-house. If you can draw it, we can break it. Custom profiles are our bread and butter.</p>
 
         <div class="spec-grid">
           <div class="spec-item">
@@ -228,7 +228,7 @@
 
       <div class="category-content">
         <h3 class="category-title">Sealants & Adhesives</h3>
-        <p class="category-desc">Weatherproofing solutions matched to your panel system. We carry what the manufacturers recommend — and we know which ones actually hold up in Colorado winters.</p>
+        <p class="category-desc">Weatherproofing solutions matched to your panel system. We carry what the manufacturers recommend, and we know which ones actually hold up in mountain winters.</p>
 
         <div class="spec-grid">
           <div class="spec-item">
@@ -241,7 +241,7 @@
           </div>
           <div class="spec-item">
             <span class="spec-marker"></span>
-            <span class="spec-text">Closure strips — inside and outside</span>
+            <span class="spec-text">Closure strips: inside and outside</span>
           </div>
           <div class="spec-item">
             <span class="spec-marker"></span>
@@ -277,7 +277,7 @@
 
       <div class="category-content">
         <h3 class="category-title">Snow Guards</h3>
-        <p class="category-desc">Protect people and property from roof avalanches. In the Colorado high country, this isn't optional — it's part of the system.</p>
+        <p class="category-desc">Protect people and property from roof avalanches. In the Colorado high country, this isn't optional. It's part of the system.</p>
 
         <div class="spec-grid">
           <div class="spec-item">
@@ -382,11 +382,14 @@
      =========================== */
   .category--reverse {
     grid-template-columns: 1fr 200px;
-    direction: rtl;
   }
 
-  .category--reverse > * {
-    direction: ltr;
+  .category--reverse .category-visual {
+    order: 2;
+  }
+
+  .category--reverse .category-content {
+    order: 1;
   }
 
   /* ===========================
@@ -667,7 +670,14 @@
 
     .category--reverse {
       grid-template-columns: 1fr;
-      direction: ltr;
+    }
+
+    .category--reverse .category-visual {
+      order: 0;
+    }
+
+    .category--reverse .category-content {
+      order: 0;
     }
 
     /* Unstick + horizontal layout for visual column */

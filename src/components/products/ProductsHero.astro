@@ -11,23 +11,18 @@
 
       <h1 class="hero-headline hero-fade-up" style="--hero-delay: 0.35s">
         Everything Your Metal Roof Needs.
-        <span class="hero-headline-sub">Fabricated In-House.</span>
+        <span class="hero-headline-sub">Built & Sourced Right.</span>
       </h1>
 
       <div class="hero-body-row hero-fade-up" style="--hero-delay: 0.55s">
         <div class="accent-line"></div>
         <p class="hero-body">
-          From standing seam panels to custom trims, every product is built to your spec in our Kremmling shop. No middlemen. No compromises.
+          From standing seam panels to custom trims, most of our products are fabricated in-house at our Kremmling shop, and what we don't build, we source from partners we trust. No compromises.
         </p>
       </div>
 
       <div class="hero-cta-row hero-fade-up" style="--hero-delay: 0.7s">
         <a href="/contact" class="cta-outline">Get a Quote</a>
-        <a href="/contact" class="cta-arrow" aria-label="Get a quote">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
-        </a>
       </div>
     </div>
 
@@ -92,6 +87,19 @@
   <!-- Blue divider beneath hero -->
   <div class="hero-divider"></div>
 </section>
+
+<script>
+  document.querySelectorAll('.manifest-row').forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const href = link.getAttribute('href');
+      const target = href ? document.querySelector(href) : null;
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+</script>
 
 <style>
   /* ===========================
@@ -208,7 +216,7 @@
     font-weight: 400;
     color: var(--white-muted);
     line-height: 150%;
-    max-width: 540px;
+    max-width: 640px;
     transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
@@ -269,32 +277,6 @@
     width: 100%;
   }
 
-  .cta-arrow {
-    width: 60px;
-    height: 60px;
-    background: transparent;
-    border: 1px solid var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--white);
-    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
-  }
-
-  .cta-arrow svg {
-    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .cta-arrow:hover {
-    background: var(--blue-accent);
-    border-color: var(--blue-accent);
-    color: var(--black);
-  }
-
-  .cta-arrow:hover svg {
-    transform: translate(3px, -3px);
-  }
-
   /* ===========================
      Product Manifest (Right Column)
      =========================== */
@@ -345,7 +327,7 @@
     opacity: 0;
     animation: manifestRowSlide 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
     animation-delay: calc(0.6s + var(--row-i) * 0.07s);
-    transition: background 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: background 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), padding-left 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .manifest-row:first-of-type {
@@ -511,21 +493,9 @@
       font-size: 18px;
     }
 
-    /* CTA: full-width stacked for easy thumb reach */
-    .hero-cta-row {
-      display: grid;
-      grid-template-columns: 1fr 52px;
-      gap: 10px;
-    }
-
     .cta-outline {
       font-size: 16px;
       padding: 14px 20px;
-      height: 52px;
-    }
-
-    .cta-arrow {
-      width: 52px;
       height: 52px;
     }
 
