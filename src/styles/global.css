@@ -43,6 +43,7 @@ img {
 .scroll-reveal.revealed {
   opacity: 1;
   transform: none;
+  transition-delay: 0s;
 }
 
 /* ===== Mobile: Dark-blue arrows by default, black on active/click ===== */

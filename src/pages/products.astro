@@ -1,0 +1,27 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import ProductsHero from '../components/products/ProductsHero.astro';
+import ProductCategories from '../components/products/ProductCategories.astro';
+import ProductSpecs from '../components/products/ProductSpecs.astro';
+import ProductsCTA from '../components/products/ProductsCTA.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout title="Products — Full Scope Metals">
+  <Header />
+
+  <main>
+    <ProductsHero />
+
+    <ProductCategories />
+
+    <ProductSpecs />
+
+    <!-- Section 3: Custom Fabrication / Process -->
+
+    <ProductsCTA />
+
+    <Footer />
+  </main>
+</BaseLayout>

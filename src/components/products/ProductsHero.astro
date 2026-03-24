@@ -1,0 +1,648 @@
+---
+
+---
+
+<section class="products-hero">
+  <div class="products-hero-inner">
+
+    <!-- Left Column: Text -->
+    <div class="hero-text-col">
+      <p class="tagline hero-fade-up" style="--hero-delay: 0.15s">Our Products</p>
+
+      <h1 class="hero-headline hero-fade-up" style="--hero-delay: 0.35s">
+        Everything Your Metal Roof Needs.
+        <span class="hero-headline-sub">Fabricated In-House.</span>
+      </h1>
+
+      <div class="hero-body-row hero-fade-up" style="--hero-delay: 0.55s">
+        <div class="accent-line"></div>
+        <p class="hero-body">
+          From standing seam panels to custom trims, every product is built to your spec in our Kremmling shop. No middlemen. No compromises.
+        </p>
+      </div>
+
+      <div class="hero-cta-row hero-fade-up" style="--hero-delay: 0.7s">
+        <a href="/contact" class="cta-outline">Get a Quote</a>
+        <a href="/contact" class="cta-arrow" aria-label="Get a quote">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- Right Column: Product Manifest -->
+    <div class="hero-manifest hero-fade-up" style="--hero-delay: 0.5s">
+      <div class="manifest-header">
+        <div class="manifest-accent-strip"></div>
+        <span class="manifest-label">Product Line</span>
+      </div>
+
+      <a href="#roof-panels" class="manifest-row" style="--row-i: 0">
+        <span class="manifest-number">01</span>
+        <span class="manifest-name">Roof Panels</span>
+        <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a href="#wall-panels" class="manifest-row" style="--row-i: 1">
+        <span class="manifest-number">02</span>
+        <span class="manifest-name">Wall Panels</span>
+        <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a href="#trims-flashing" class="manifest-row" style="--row-i: 2">
+        <span class="manifest-number">03</span>
+        <span class="manifest-name">Trims & Flashing</span>
+        <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a href="#fasteners-hardware" class="manifest-row" style="--row-i: 3">
+        <span class="manifest-number">04</span>
+        <span class="manifest-name">Fasteners & Hardware</span>
+        <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a href="#sealants-adhesives" class="manifest-row" style="--row-i: 4">
+        <span class="manifest-number">05</span>
+        <span class="manifest-name">Sealants & Adhesives</span>
+        <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a href="#snow-guards" class="manifest-row" style="--row-i: 5">
+        <span class="manifest-number">06</span>
+        <span class="manifest-name">Snow Guards</span>
+        <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+
+  <!-- Blue divider beneath hero -->
+  <div class="hero-divider"></div>
+</section>
+
+<style>
+  /* ===========================
+     Hero Load Animations
+     =========================== */
+  @keyframes heroFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dividerExpand {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+  @keyframes manifestRowSlide {
+    from {
+      opacity: 0;
+      transform: translateX(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  .hero-fade-up {
+    opacity: 0;
+    animation: heroFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: var(--hero-delay, 0s);
+  }
+
+  /* ===========================
+     Hero Layout
+     =========================== */
+  .products-hero {
+    background:
+      radial-gradient(ellipse 60% 50% at 80% 40%, rgba(36, 93, 167, 0.06) 0%, transparent 70%),
+      var(--bg);
+    padding: 32px 0 0;
+  }
+
+  .products-hero-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 80px;
+    align-items: start;
+    min-height: 520px;
+  }
+
+  /* ===========================
+     Text Column
+     =========================== */
+  .hero-text-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 0 60px;
+  }
+
+  .tagline {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 12px;
+  }
+
+  .hero-headline {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 110%;
+    margin-bottom: 28px;
+    max-width: 700px;
+  }
+
+  .hero-headline-sub {
+    display: block;
+    color: var(--blue-accent);
+  }
+
+  .hero-body-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 44px;
+  }
+
+  .accent-line {
+    width: 2px;
+    height: 48px;
+    background: var(--blue-primary);
+    flex-shrink: 0;
+    margin-top: 4px;
+    transition: height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .hero-body {
+    font-family: var(--font-body);
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 150%;
+    max-width: 540px;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .hero-body-row:hover .accent-line {
+    background: var(--blue-accent);
+    height: 56px;
+  }
+
+  .hero-body-row:hover .hero-body {
+    color: var(--white-full);
+  }
+
+  /* CTA Row */
+  .hero-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-outline {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    border: 1px solid var(--white);
+    background: transparent;
+    padding: 16px 26px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--white);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-outline:hover {
+    color: var(--bg);
+  }
+
+  .cta-outline:hover::before {
+    width: 100%;
+  }
+
+  .cta-arrow {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border: 1px solid var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+  }
+
+  .cta-arrow svg {
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-arrow:hover {
+    background: var(--blue-accent);
+    border-color: var(--blue-accent);
+    color: var(--black);
+  }
+
+  .cta-arrow:hover svg {
+    transform: translate(3px, -3px);
+  }
+
+  /* ===========================
+     Product Manifest (Right Column)
+     =========================== */
+  .hero-manifest {
+    padding-top: 40px;
+  }
+
+  .manifest-header {
+    position: relative;
+    padding-bottom: 16px;
+    margin-bottom: 0;
+  }
+
+  .manifest-accent-strip {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 4px;
+    background: var(--blue-primary);
+    transition: width 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .hero-manifest:hover .manifest-accent-strip {
+    width: 100%;
+  }
+
+  .manifest-label {
+    display: block;
+    padding-top: 16px;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--blue-accent);
+  }
+
+  /* Manifest Rows */
+  .manifest-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(232, 232, 232, 0.08);
+    text-decoration: none;
+    position: relative;
+    opacity: 0;
+    animation: manifestRowSlide 0.5s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: calc(0.6s + var(--row-i) * 0.07s);
+    transition: background 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .manifest-row:first-of-type {
+    border-top: 1px solid rgba(232, 232, 232, 0.08);
+  }
+
+  /* Blue left border on hover */
+  .manifest-row::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--blue-accent);
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .manifest-row:hover::before {
+    transform: scaleY(1);
+  }
+
+  .manifest-row:hover {
+    background: rgba(36, 93, 167, 0.06);
+    padding-left: 16px;
+  }
+
+  .manifest-number {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--blue-primary);
+    letter-spacing: 0.06em;
+    flex-shrink: 0;
+    width: 28px;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .manifest-row:hover .manifest-number {
+    color: var(--blue-accent);
+  }
+
+  .manifest-name {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    flex: 1;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .manifest-row:hover .manifest-name {
+    color: var(--white-full);
+    transform: translateX(4px);
+  }
+
+  .manifest-arrow {
+    color: rgba(232, 232, 232, 0.15);
+    flex-shrink: 0;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .manifest-row:hover .manifest-arrow {
+    color: var(--blue-accent);
+    transform: translate(3px, -3px);
+  }
+
+  /* ===========================
+     Hero Divider
+     =========================== */
+  .hero-divider {
+    width: 100%;
+    height: 18px;
+    background: var(--blue-primary);
+    margin-top: 0;
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: dividerExpand 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: 0.85s;
+  }
+
+  /* ===========================
+     Responsive — 1200px
+     =========================== */
+  @media (max-width: 1200px) {
+    .products-hero-inner {
+      padding: 0 80px;
+      gap: 60px;
+      grid-template-columns: 1fr 380px;
+    }
+
+    .hero-headline {
+      font-size: 60px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 1024px
+     =========================== */
+  @media (max-width: 1024px) {
+    .products-hero-inner {
+      padding: 0 48px;
+      gap: 48px;
+      grid-template-columns: 1fr 320px;
+      min-height: 480px;
+    }
+
+    .hero-headline {
+      font-size: 50px;
+    }
+
+    .hero-body {
+      font-size: 18px;
+    }
+
+    .manifest-name {
+      font-size: 19px;
+    }
+
+    .manifest-row {
+      padding: 15px 0;
+    }
+  }
+
+  /* ===========================
+     Responsive — 768px
+     =========================== */
+  @media (max-width: 768px) {
+    .products-hero {
+      padding: 48px 0 0;
+    }
+
+    .products-hero-inner {
+      padding: 0 24px;
+      grid-template-columns: 1fr;
+      gap: 48px;
+      min-height: auto;
+    }
+
+    .hero-text-col {
+      padding: 0 0 8px;
+    }
+
+    .hero-headline {
+      font-size: 38px;
+      max-width: 100%;
+      margin-bottom: 24px;
+    }
+
+    .hero-body {
+      font-size: 16px;
+      max-width: 100%;
+    }
+
+    .hero-body-row {
+      margin-bottom: 36px;
+    }
+
+    .tagline {
+      font-size: 18px;
+    }
+
+    /* CTA: full-width stacked for easy thumb reach */
+    .hero-cta-row {
+      display: grid;
+      grid-template-columns: 1fr 52px;
+      gap: 10px;
+    }
+
+    .cta-outline {
+      font-size: 16px;
+      padding: 14px 20px;
+      height: 52px;
+    }
+
+    .cta-arrow {
+      width: 52px;
+      height: 52px;
+    }
+
+    /* Manifest: clear section break from hero text */
+    .hero-manifest {
+      padding-top: 8px;
+      border-top: 1px solid rgba(232, 232, 232, 0.08);
+    }
+
+    .manifest-accent-strip {
+      width: 64px;
+    }
+
+    .manifest-name {
+      font-size: 19px;
+    }
+
+    /* Generous touch targets — 52px min row height */
+    .manifest-row {
+      padding: 16px 0 16px 12px;
+      min-height: 52px;
+      gap: 14px;
+    }
+
+    /* Always show blue left border on mobile for scannability */
+    .manifest-row::before {
+      transform: scaleY(1);
+      width: 3px;
+      background: var(--blue-primary);
+    }
+
+    /* Active state for touch instead of hover */
+    .manifest-row:active {
+      background: rgba(36, 93, 167, 0.1);
+    }
+
+    .manifest-row:active .manifest-number {
+      color: var(--blue-accent);
+    }
+
+    .manifest-row:active .manifest-name {
+      color: var(--white-full);
+    }
+
+    .manifest-row:active .manifest-arrow {
+      color: var(--blue-accent);
+    }
+
+    /* Arrow always visible on mobile for affordance */
+    .manifest-arrow {
+      color: rgba(232, 232, 232, 0.3);
+    }
+
+    .hero-divider {
+      height: 10px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 480px
+     =========================== */
+  @media (max-width: 480px) {
+    .products-hero {
+      padding: 40px 0 0;
+    }
+
+    .products-hero-inner {
+      padding: 0 16px;
+      gap: 40px;
+    }
+
+    .hero-headline {
+      font-size: 30px;
+      letter-spacing: -0.01em;
+    }
+
+    .hero-headline-sub {
+      font-size: 28px;
+    }
+
+    .hero-body {
+      font-size: 15px;
+    }
+
+    .hero-body-row {
+      margin-bottom: 32px;
+    }
+
+    .tagline {
+      font-size: 16px;
+    }
+
+    .manifest-name {
+      font-size: 17px;
+    }
+
+    .manifest-number {
+      font-size: 12px;
+      width: 24px;
+    }
+
+    .manifest-row {
+      padding: 14px 0 14px 12px;
+      min-height: 48px;
+      gap: 10px;
+    }
+
+    .manifest-label {
+      font-size: 12px;
+    }
+
+    .manifest-header {
+      padding-bottom: 12px;
+    }
+
+    .hero-divider {
+      height: 8px;
+    }
+  }
+</style>
