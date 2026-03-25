@@ -147,6 +147,17 @@
     transition: background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
+  /* Merge scroll-reveal opacity/transform into scoped transition */
+  .card.scroll-reveal {
+    transition:
+      opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+      background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+      border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+      box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-delay: var(--delay, 0s);
+  }
+
   .card-arrow {
     position: absolute;
     top: 28px;

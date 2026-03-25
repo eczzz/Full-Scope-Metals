@@ -27,6 +27,11 @@ a {
   color: inherit;
 }
 
+/* Offset for sticky header on mobile when jumping to anchor targets */
+[id] {
+  scroll-margin-top: 100px;
+}
+
 img {
   display: block;
   max-width: 100%;

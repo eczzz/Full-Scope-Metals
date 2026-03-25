@@ -30,6 +30,7 @@
           <img
             src="/full-scope-metals-colorado.webp"
             alt="Colorado Born and Built"
+            loading="lazy"
             width="271"
             height="270"
           />
@@ -47,6 +48,7 @@
           <img
             src="/full-scope-metals-orders.webp"
             alt="Custom Fabricated Orders"
+            loading="lazy"
             width="271"
             height="270"
           />
@@ -66,6 +68,7 @@
           <img
             src="/full-scope-metals-products.webp"
             alt="Product Categories In Stock"
+            loading="lazy"
             width="271"
             height="270"
           />
@@ -83,6 +86,7 @@
           <img
             src="/full-scope-metals-turnaround.webp"
             alt="Average Turnaround Time"
+            loading="lazy"
             width="271"
             height="270"
           />
@@ -227,6 +231,14 @@
     padding: 0 32px;
     border-right: 1px solid var(--white);
     transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  /* Merge scroll-reveal opacity/transform into scoped transition */
+  .stat-col.scroll-reveal {
+    transition:
+      opacity 0.8s cubic-bezier(0.25, 0.1, 0.25, 1),
+      transform 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition-delay: var(--delay, 0s);
   }
 
   .stat-col:hover {
