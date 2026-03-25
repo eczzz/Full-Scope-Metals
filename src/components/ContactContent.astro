@@ -1,0 +1,957 @@
+---
+
+---
+
+<section class="contact-content" id="contact-form">
+  <div class="contact-content-inner">
+
+    <!-- Section Intro -->
+    <div class="content-intro scroll-reveal">
+      <div class="intro-marker">
+        <span class="intro-line"></span>
+        <span class="intro-label">Request a Quote</span>
+      </div>
+      <h2 class="intro-headline">Tell Us What<br />You're Building.</h2>
+      <p class="intro-sub">Panels, trim, accessories — custom to your spec. Fill out the form or pick up the phone. Either way, you'll talk to someone who's been on a roof.</p>
+    </div>
+
+    <!-- Main Grid: Form (dominant) + Sidebar -->
+    <div class="content-grid">
+
+      <!-- Form Column — takes the stage -->
+      <div class="form-column scroll-reveal" style="--delay: 0.15s">
+        <form method="POST" action="#" class="quote-form">
+          <div class="form-row-pair">
+            <div class="form-field">
+              <input type="text" name="full_name" placeholder="Full Name*" required aria-label="Full Name" />
+            </div>
+            <div class="form-field">
+              <input type="email" name="email" placeholder="Email Address*" required aria-label="Email Address" />
+            </div>
+          </div>
+          <div class="form-row-pair">
+            <div class="form-field">
+              <input type="tel" name="phone" placeholder="Phone Number*" required aria-label="Phone Number" />
+            </div>
+            <div class="form-field">
+              <input type="text" name="subject" placeholder="Subject*" required aria-label="Subject" />
+            </div>
+          </div>
+          <div class="form-field form-field-message">
+            <span class="textarea-label">Message*</span>
+            <textarea name="message" placeholder="Tell us about your project — materials, dimensions, timeline. The more detail, the faster we quote." rows="6" required aria-label="Message"></textarea>
+          </div>
+          <div class="form-actions">
+            <button type="submit" class="submit-btn">
+              <span class="submit-text">Send Quote Request</span>
+              <svg class="submit-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <span class="form-note">We respond within one business day. Usually faster.</span>
+          </div>
+        </form>
+      </div>
+
+      <!-- Sidebar — contact info strip -->
+      <aside class="contact-sidebar scroll-reveal" style="--delay: 0.3s">
+        <div class="sidebar-inner">
+
+          <!-- Phone — primary CTA for callers -->
+          <div class="sidebar-block sidebar-phone-block">
+            <div class="sidebar-icon">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81 19.79 19.79 0 01.12 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="sidebar-label">Rather Call?</span>
+            <a href="tel:9702812982" class="sidebar-phone">(970) 281-2982</a>
+            <span class="sidebar-hours-inline">Mon – Sat · 7:30A – 5:30P</span>
+          </div>
+
+          <div class="sidebar-divider"></div>
+
+          <!-- Address -->
+          <div class="sidebar-block sidebar-address-block">
+            <div class="sidebar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0118 0z" stroke="currentColor" stroke-width="2"/>
+                <circle cx="12" cy="10" r="3" stroke="currentColor" stroke-width="2"/>
+              </svg>
+            </div>
+            <span class="sidebar-label">Shop Location</span>
+            <a href="https://maps.google.com/?q=5871+Co+Hwy+22+Kremmling+CO+80459" target="_blank" rel="noopener" class="sidebar-value sidebar-address-link">5871 Co Hwy 22<br />Kremmling, CO 80459</a>
+          </div>
+
+          <div class="sidebar-divider sidebar-divider-hours"></div>
+
+          <!-- Hours -->
+          <div class="sidebar-block sidebar-hours-block">
+            <div class="sidebar-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
+                <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="sidebar-label">Hours</span>
+            <p class="sidebar-value">Mon – Sat: 7:30A – 5:30P<br />Sun: Closed</p>
+          </div>
+
+          <!-- Turnaround badge -->
+          <div class="sidebar-badge">
+            <span class="badge-number">5</span>
+            <span class="badge-text">Day Avg.<br />Turnaround</span>
+          </div>
+
+        </div>
+      </aside>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ===========================
+     Contact Content Section
+     =========================== */
+  .contact-content {
+    background: var(--bg);
+    padding: 100px 0 120px;
+    position: relative;
+  }
+
+  .contact-content-inner {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 100px;
+  }
+
+  /* ===========================
+     Intro Block
+     =========================== */
+  .content-intro {
+    margin-bottom: 64px;
+  }
+
+  .intro-marker {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+
+  .intro-line {
+    display: block;
+    width: 48px;
+    height: 2px;
+    background: var(--blue-primary);
+    flex-shrink: 0;
+  }
+
+  .intro-label {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blue-accent);
+  }
+
+  .intro-headline {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 105%;
+    margin-bottom: 20px;
+  }
+
+  .intro-sub {
+    font-family: var(--font-body);
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 170%;
+    max-width: 620px;
+  }
+
+  /* ===========================
+     Content Grid
+     =========================== */
+  .content-grid {
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 80px;
+    align-items: start;
+  }
+
+  /* ===========================
+     Form Column
+     =========================== */
+  .form-column {
+    position: relative;
+  }
+
+  .form-column::before {
+    content: '';
+    position: absolute;
+    top: -32px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, var(--blue-primary) 0%, var(--blue-accent) 40%, transparent 100%);
+  }
+
+  .quote-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .form-row-pair {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .form-field {
+    position: relative;
+  }
+
+  .form-field input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-top: 1px solid rgba(232, 232, 232, 0.3);
+    padding: 20px 0 16px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-full);
+    outline: none;
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .form-field input::placeholder {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-muted);
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .form-field-message {
+    margin-top: 16px;
+  }
+
+  .textarea-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-muted);
+    padding: 20px 0 0;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .form-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(232, 232, 232, 0.3);
+    padding: 12px 0 16px;
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white-full);
+    line-height: 160%;
+    outline: none;
+    resize: vertical;
+    min-height: 140px;
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .form-field textarea::placeholder {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white-muted);
+    line-height: 160%;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  /* Hover & Focus States */
+  .form-field:hover input,
+  .form-field input:focus {
+    border-top-color: var(--blue-primary);
+  }
+
+  .form-field:hover input::placeholder,
+  .form-field input:focus::placeholder {
+    color: var(--blue-primary);
+  }
+
+  .form-field-message:hover .textarea-label,
+  .form-field-message:focus-within .textarea-label {
+    color: var(--blue-primary);
+  }
+
+  .form-field:hover textarea,
+  .form-field textarea:focus {
+    border-bottom-color: var(--blue-primary);
+  }
+
+  .form-field:hover textarea::placeholder,
+  .form-field textarea:focus::placeholder {
+    color: var(--blue-primary);
+  }
+
+  /* Form Actions */
+  .form-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    margin-top: 40px;
+  }
+
+  .submit-btn {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    background: transparent;
+    border: 1px solid var(--white);
+    padding: 18px 32px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    flex-shrink: 0;
+  }
+
+  .submit-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--white);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .submit-btn:hover {
+    color: var(--bg);
+  }
+
+  .submit-btn:hover::before {
+    width: 100%;
+  }
+
+  .submit-arrow {
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .submit-btn:hover .submit-arrow {
+    transform: translateX(4px);
+  }
+
+  .form-note {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 150%;
+  }
+
+  /* ===========================
+     Sidebar
+     =========================== */
+  .contact-sidebar {
+    position: relative;
+  }
+
+  .sidebar-inner {
+    border-left: 3px solid var(--blue-primary);
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Sidebar Blocks */
+  .sidebar-block {
+    padding: 8px 0;
+  }
+
+  .sidebar-phone-block {
+    padding-top: 0;
+  }
+
+  .sidebar-icon {
+    color: var(--blue-accent);
+    margin-bottom: 12px;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .sidebar-block:hover .sidebar-icon {
+    color: var(--white-full);
+  }
+
+  .sidebar-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--white-muted);
+    margin-bottom: 8px;
+  }
+
+  .sidebar-phone {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 400;
+    color: var(--white-full);
+    text-decoration: none;
+    letter-spacing: 0.02em;
+    line-height: 120%;
+    margin-bottom: 10px;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .sidebar-phone:hover {
+    color: var(--blue-accent);
+  }
+
+  .sidebar-hours-inline {
+    display: block;
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--white-muted);
+  }
+
+  .sidebar-value {
+    font-family: var(--font-body);
+    font-size: 17px;
+    font-weight: 400;
+    color: var(--white);
+    line-height: 155%;
+  }
+
+  .sidebar-address-link {
+    display: block;
+    text-decoration: none;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .sidebar-address-link:hover {
+    color: var(--blue-accent);
+  }
+
+  .sidebar-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(232, 232, 232, 0.1);
+    margin: 28px 0;
+  }
+
+  /* Turnaround Badge */
+  .sidebar-badge {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: rgba(36, 93, 167, 0.1);
+    border: 1px solid rgba(36, 93, 167, 0.25);
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
+                background 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .sidebar-badge:hover {
+    border-color: rgba(36, 93, 167, 0.5);
+    background: rgba(36, 93, 167, 0.15);
+  }
+
+  .badge-number {
+    font-family: var(--font-heading);
+    font-size: 48px;
+    font-weight: 700;
+    color: var(--blue-accent);
+    line-height: 1;
+    flex-shrink: 0;
+  }
+
+  .badge-text {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    line-height: 140%;
+    letter-spacing: 0.04em;
+  }
+
+  /* ===========================
+     Responsive — 1200px
+     =========================== */
+  @media (max-width: 1200px) {
+    .contact-content {
+      padding: 80px 0 100px;
+    }
+
+    .contact-content-inner {
+      padding: 0 60px;
+    }
+
+    .intro-headline {
+      font-size: 60px;
+    }
+
+    .content-grid {
+      grid-template-columns: 1fr 320px;
+      gap: 60px;
+    }
+
+    .sidebar-phone {
+      font-size: 30px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 1024px
+     =========================== */
+  @media (max-width: 1024px) {
+    .contact-content {
+      padding: 64px 0 80px;
+    }
+
+    .contact-content-inner {
+      padding: 0 40px;
+    }
+
+    .intro-headline {
+      font-size: 52px;
+    }
+
+    .content-intro {
+      margin-bottom: 48px;
+    }
+
+    .content-grid {
+      grid-template-columns: 1fr 280px;
+      gap: 48px;
+    }
+
+    .form-row-pair {
+      gap: 28px;
+    }
+
+    .sidebar-inner {
+      padding-left: 32px;
+    }
+
+    .sidebar-phone {
+      font-size: 26px;
+    }
+
+    .badge-number {
+      font-size: 40px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 768px
+     =========================== */
+  @media (max-width: 768px) {
+    .contact-content {
+      padding: 48px 0 64px;
+    }
+
+    .contact-content-inner {
+      padding: 0 24px;
+    }
+
+    .intro-headline {
+      font-size: 40px;
+      margin-bottom: 16px;
+    }
+
+    .intro-sub {
+      font-size: 16px;
+      max-width: 100%;
+    }
+
+    .intro-marker {
+      margin-bottom: 14px;
+    }
+
+    .intro-line {
+      width: 36px;
+    }
+
+    .intro-label {
+      font-size: 14px;
+    }
+
+    .content-intro {
+      margin-bottom: 40px;
+    }
+
+    /* Compress scroll-reveal animation for mobile — shorter travel, faster timing */
+    .scroll-reveal {
+      transform: translateY(16px);
+      transition-duration: 0.5s;
+      transition-delay: 0s !important;
+    }
+
+    .scroll-reveal.revealed {
+      transform: none;
+    }
+
+    /* Stack to single column — sidebar goes ABOVE form on mobile.
+       A contractor in a parking lot wants the phone number FIRST.
+       The form is secondary — they scroll to it if they need it. */
+    .content-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .contact-sidebar {
+      order: -1;
+      margin-bottom: 40px;
+    }
+
+    .sidebar-inner {
+      border-left: none;
+      border-top: 3px solid var(--blue-primary);
+      padding-left: 0;
+      padding-top: 28px;
+    }
+
+    /* Phone block — the primary mobile CTA. Must feel tappable and deliberate. */
+    .sidebar-phone-block {
+      background: rgba(36, 93, 167, 0.08);
+      border: 1px solid rgba(36, 93, 167, 0.25);
+      border-radius: 0;
+      padding: 24px 20px;
+      margin-bottom: 0;
+      text-align: center;
+      transition: background 0.2s ease, border-color 0.2s ease;
+      -webkit-tap-highlight-color: transparent;
+      cursor: pointer;
+    }
+
+    .sidebar-phone-block:active {
+      background: rgba(36, 93, 167, 0.2);
+      border-color: var(--blue-accent);
+    }
+
+    .sidebar-phone-block .sidebar-icon {
+      margin-bottom: 6px;
+    }
+
+    .sidebar-phone-block .sidebar-icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .sidebar-phone-block .sidebar-label {
+      font-size: 13px;
+      margin-bottom: 6px;
+    }
+
+    .sidebar-phone {
+      font-size: 30px;
+      margin-bottom: 8px;
+      /* Ensure the entire phone block is tappable, not just the text */
+      display: block;
+      color: var(--white-full);
+    }
+
+    .sidebar-phone:active {
+      color: var(--blue-accent);
+    }
+
+    .sidebar-hours-inline {
+      font-size: 13px;
+    }
+
+    /* Address and hours go compact inline row */
+    .sidebar-block:not(.sidebar-phone-block) {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 4px 14px;
+      align-items: start;
+      padding: 0;
+    }
+
+    .sidebar-block:not(.sidebar-phone-block) .sidebar-icon {
+      margin-bottom: 0;
+      margin-top: 2px;
+      grid-row: 1 / -1;
+      grid-column: 1;
+    }
+
+    .sidebar-block:not(.sidebar-phone-block) .sidebar-label {
+      grid-column: 2;
+    }
+
+    .sidebar-block:not(.sidebar-phone-block) .sidebar-value {
+      grid-column: 2;
+    }
+
+    .sidebar-block:not(.sidebar-phone-block) .sidebar-icon svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .sidebar-block:not(.sidebar-phone-block) .sidebar-label {
+      font-size: 12px;
+      margin-bottom: 4px;
+    }
+
+    .sidebar-block:not(.sidebar-phone-block) .sidebar-value {
+      font-size: 15px;
+    }
+
+    /* Address link — tappable on mobile to open maps */
+    .sidebar-address-link {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .sidebar-address-link:active {
+      color: var(--blue-accent);
+    }
+
+    /* Hide standalone hours block — hours already shown inline in phone card.
+       Keeps sidebar compact; every scroll pixel matters on mobile.
+       !important needed: .sidebar-block:not(.sidebar-phone-block) has higher
+       specificity (0,2,0 vs 0,1,0) and sets display:flex, which would win. */
+    .sidebar-hours-block,
+    .sidebar-divider-hours {
+      display: none !important;
+    }
+
+    .sidebar-divider {
+      margin: 16px 0;
+    }
+
+    /* Badge repositioned: sits right under address, not buried at bottom.
+       On mobile it reinforces speed — the thing contractors care about. */
+    .sidebar-badge {
+      margin-top: 20px;
+      padding: 16px 20px;
+      justify-content: center;
+    }
+
+    .badge-number {
+      font-size: 40px;
+    }
+
+    .badge-text {
+      font-size: 14px;
+    }
+
+    /* Form adjustments — intentional at 375px */
+    .form-column::before {
+      top: -20px;
+      height: 2px;
+    }
+
+    .form-row-pair {
+      grid-template-columns: 1fr;
+      gap: 0;
+    }
+
+    .form-field input {
+      font-size: 16px;
+      padding: 16px 0 14px;
+      /* 16px prevents iOS zoom on focus */
+    }
+
+    .form-field input::placeholder {
+      font-size: 16px;
+    }
+
+    .textarea-label {
+      font-size: 16px;
+      padding-top: 16px;
+    }
+
+    .form-field textarea {
+      font-size: 16px;
+      min-height: 120px;
+    }
+
+    .form-field textarea::placeholder {
+      font-size: 15px;
+    }
+
+    .form-field-message {
+      margin-top: 8px;
+    }
+
+    .form-actions {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 16px;
+      margin-top: 32px;
+    }
+
+    /* Submit button — full-width CTA that feels intentional, not just stretched */
+    .submit-btn {
+      justify-content: center;
+      font-size: 17px;
+      padding: 18px 24px;
+      letter-spacing: 0.04em;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Active state replaces hover on touch devices */
+    .submit-btn:active {
+      color: var(--bg);
+    }
+
+    .submit-btn:active::before {
+      width: 100%;
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 13px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 480px (small phones, 375px target)
+     =========================== */
+  @media (max-width: 480px) {
+    .contact-content {
+      padding: 36px 0 48px;
+    }
+
+    .contact-content-inner {
+      padding: 0 16px;
+    }
+
+    .intro-headline {
+      font-size: 32px;
+    }
+
+    .intro-sub {
+      font-size: 15px;
+      line-height: 165%;
+    }
+
+    .intro-line {
+      width: 28px;
+    }
+
+    .intro-label {
+      font-size: 13px;
+    }
+
+    .content-intro {
+      margin-bottom: 28px;
+    }
+
+    .contact-sidebar {
+      margin-bottom: 32px;
+    }
+
+    .sidebar-inner {
+      padding-top: 20px;
+    }
+
+    .sidebar-phone-block {
+      padding: 20px 16px;
+    }
+
+    .sidebar-phone {
+      font-size: 26px;
+      letter-spacing: 0.01em;
+    }
+
+    .sidebar-hours-inline {
+      font-size: 12px;
+    }
+
+    .sidebar-block:not(.sidebar-phone-block) .sidebar-value {
+      font-size: 14px;
+    }
+
+    .sidebar-block:not(.sidebar-phone-block) .sidebar-label {
+      font-size: 11px;
+    }
+
+    .sidebar-divider {
+      margin: 14px 0;
+    }
+
+    .sidebar-badge {
+      margin-top: 16px;
+      padding: 14px 16px;
+      gap: 12px;
+    }
+
+    .badge-number {
+      font-size: 34px;
+    }
+
+    .badge-text {
+      font-size: 13px;
+    }
+
+    .form-column::before {
+      top: -16px;
+    }
+
+    .form-field input {
+      font-size: 16px;
+      padding: 14px 0 12px;
+    }
+
+    .form-field input::placeholder {
+      font-size: 16px;
+    }
+
+    .textarea-label {
+      font-size: 16px;
+      padding-top: 14px;
+    }
+
+    .form-field textarea {
+      font-size: 16px;
+      min-height: 110px;
+    }
+
+    .form-field textarea::placeholder {
+      font-size: 15px;
+    }
+
+    .form-actions {
+      margin-top: 24px;
+      gap: 12px;
+    }
+
+    .submit-btn {
+      font-size: 16px;
+      padding: 16px 20px;
+    }
+
+    .form-note {
+      font-size: 12px;
+    }
+  }
+</style>
