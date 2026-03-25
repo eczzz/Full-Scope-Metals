@@ -7,12 +7,9 @@
 
     <!-- Section Intro -->
     <div class="content-intro scroll-reveal">
-      <div class="intro-marker">
-        <span class="intro-line"></span>
-        <span class="intro-label">Request a Quote</span>
-      </div>
+      <p class="section-label">Request a Quote</p>
       <h2 class="intro-headline">Tell Us What<br />You're Building.</h2>
-      <p class="intro-sub">Panels, trim, accessories — custom to your spec. Fill out the form or pick up the phone. Either way, you'll talk to someone who's been on a roof.</p>
+      <p class="intro-sub">Panels, trim, accessories, custom to your spec. Fill out the form or pick up the phone. Either way, you'll talk to someone who's been on a roof.</p>
     </div>
 
     <!-- Main Grid: Form (dominant) + Sidebar -->
@@ -39,7 +36,7 @@
           </div>
           <div class="form-field form-field-message">
             <span class="textarea-label">Message*</span>
-            <textarea name="message" placeholder="Tell us about your project — materials, dimensions, timeline. The more detail, the faster we quote." rows="6" required aria-label="Message"></textarea>
+            <textarea name="message" placeholder="Tell us about your project. Materials, dimensions, timeline. The more detail, the faster we quote." rows="6" required aria-label="Message"></textarea>
           </div>
           <div class="form-actions">
             <button type="submit" class="submit-btn">
@@ -60,13 +57,13 @@
           <!-- Phone — primary CTA for callers -->
           <div class="sidebar-block sidebar-phone-block">
             <div class="sidebar-icon">
-              <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.09 9.81 19.79 19.79 0 01.12 1.18 2 2 0 012.11 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" stroke="currentColor" stroke-width="2"/>
               </svg>
             </div>
             <span class="sidebar-label">Rather Call?</span>
             <a href="tel:9702812982" class="sidebar-phone">(970) 281-2982</a>
-            <span class="sidebar-hours-inline">Mon – Sat · 7:30A – 5:30P</span>
+            <span class="sidebar-hours-inline">Mon - Sat · 7:30A - 5:30P</span>
           </div>
 
           <div class="sidebar-divider"></div>
@@ -94,7 +91,7 @@
               </svg>
             </div>
             <span class="sidebar-label">Hours</span>
-            <p class="sidebar-value">Mon – Sat: 7:30A – 5:30P<br />Sun: Closed</p>
+            <p class="sidebar-value">Mon - Sat: 7:30A - 5:30P<br />Sun: Closed</p>
           </div>
 
           <!-- Turnaround badge -->
@@ -132,28 +129,13 @@
     margin-bottom: 64px;
   }
 
-  .intro-marker {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .intro-line {
-    display: block;
-    width: 48px;
-    height: 2px;
-    background: var(--blue-primary);
-    flex-shrink: 0;
-  }
-
-  .intro-label {
+  .section-label {
     font-family: var(--font-heading);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--blue-accent);
+    color: var(--white);
+    margin-bottom: 20px;
   }
 
   .intro-headline {
@@ -192,15 +174,6 @@
     position: relative;
   }
 
-  .form-column::before {
-    content: '';
-    position: absolute;
-    top: -32px;
-    left: 0;
-    width: 100%;
-    height: 3px;
-    background: linear-gradient(90deg, var(--blue-primary) 0%, var(--blue-accent) 40%, transparent 100%);
-  }
 
   .quote-form {
     display: flex;
@@ -592,16 +565,9 @@
       max-width: 100%;
     }
 
-    .intro-marker {
+    .section-label {
+      font-size: 18px;
       margin-bottom: 14px;
-    }
-
-    .intro-line {
-      width: 36px;
-    }
-
-    .intro-label {
-      font-size: 14px;
     }
 
     .content-intro {
@@ -619,17 +585,17 @@
       transform: none;
     }
 
-    /* Stack to single column — sidebar goes ABOVE form on mobile.
-       A contractor in a parking lot wants the phone number FIRST.
-       The form is secondary — they scroll to it if they need it. */
     .content-grid {
       grid-template-columns: 1fr;
       gap: 0;
     }
 
     .contact-sidebar {
-      order: -1;
-      margin-bottom: 40px;
+      margin-top: 48px;
+    }
+
+    .form-column {
+      padding-top: 32px;
     }
 
     .sidebar-inner {
@@ -763,12 +729,6 @@
       font-size: 14px;
     }
 
-    /* Form adjustments — intentional at 375px */
-    .form-column::before {
-      top: -20px;
-      height: 2px;
-    }
-
     .form-row-pair {
       grid-template-columns: 1fr;
       gap: 0;
@@ -854,12 +814,8 @@
       line-height: 165%;
     }
 
-    .intro-line {
-      width: 28px;
-    }
-
-    .intro-label {
-      font-size: 13px;
+    .section-label {
+      font-size: 16px;
     }
 
     .content-intro {
@@ -867,7 +823,7 @@
     }
 
     .contact-sidebar {
-      margin-bottom: 32px;
+      margin-top: 40px;
     }
 
     .sidebar-inner {
@@ -911,10 +867,6 @@
 
     .badge-text {
       font-size: 13px;
-    }
-
-    .form-column::before {
-      top: -16px;
     }
 
     .form-field input {

@@ -18,12 +18,22 @@
         </div>
         <div class="explore-row">
           <p class="explore-label">Explore Products:</p>
-          <a href="/products/roof-panels" class="cta-blue">
-            <span>Roof Panels</span>
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
+          <div class="dropdown-wrap">
+            <button class="cta-blue dropdown-toggle" aria-expanded="false" aria-haspopup="true">
+              <span class="dropdown-toggle-text">Select Product</span>
+              <svg class="dropdown-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M6 9L12 15L18 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+            <div class="dropdown-menu" role="menu">
+              <a href="/products#roof-panels" class="dropdown-item" role="menuitem">Roof Panels</a>
+              <a href="/products#wall-panels" class="dropdown-item" role="menuitem">Wall Panels</a>
+              <a href="/products#trims-flashing" class="dropdown-item" role="menuitem">Trims & Flashing</a>
+              <a href="/products#fasteners-hardware" class="dropdown-item" role="menuitem">Fasteners & Hardware</a>
+              <a href="/products#sealants-adhesives" class="dropdown-item" role="menuitem">Sealants & Adhesives</a>
+              <a href="/products#snow-guards" class="dropdown-item" role="menuitem">Snow Guards</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -31,7 +41,7 @@
     <!-- Row 1: 3 cards -->
     <div class="card-grid row-3">
       <!-- Card: Roof Panels -->
-      <a href="/products/roof-panels" class="card scroll-reveal" style="--delay: 0.1s">
+      <a href="/products#roof-panels" class="card scroll-reveal" style="--delay: 0.1s">
         <div class="card-top">
           <!-- Warehouse/garage icon -->
           <svg class="card-icon" width="32" height="32" viewBox="0 0 640 512" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +56,7 @@
       </a>
 
       <!-- Card: Wall Panels -->
-      <a href="/products/wall-panels" class="card scroll-reveal" style="--delay: 0.2s">
+      <a href="/products#wall-panels" class="card scroll-reveal" style="--delay: 0.2s">
         <div class="card-top">
           <!-- Building/grid icon -->
           <svg class="card-icon" width="32" height="32" viewBox="0 0 384 512" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +71,7 @@
       </a>
 
       <!-- Card: Trims & Flashing -->
-      <a href="/products/trims-flashing" class="card scroll-reveal" style="--delay: 0.3s">
+      <a href="/products#trims-flashing" class="card scroll-reveal" style="--delay: 0.3s">
         <div class="card-top">
           <!-- Ruler/trim icon -->
           <svg class="card-icon" width="32" height="32" viewBox="0 0 512 512" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +89,7 @@
     <!-- Row 2: 3 cards -->
     <div class="card-grid row-3">
       <!-- Card: Fasteners & Hardware -->
-      <a href="/products/fasteners-hardware" class="card scroll-reveal" style="--delay: 0.1s">
+      <a href="/products#fasteners-hardware" class="card scroll-reveal" style="--delay: 0.1s">
         <div class="card-top">
           <!-- Wrench icon -->
           <svg class="card-icon" width="32" height="32" viewBox="0 0 512 512" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
@@ -94,7 +104,7 @@
       </a>
 
       <!-- Card: Sealants & Adhesives -->
-      <a href="/products/sealants-adhesives" class="card scroll-reveal" style="--delay: 0.2s">
+      <a href="/products#sealants-adhesives" class="card scroll-reveal" style="--delay: 0.2s">
         <div class="card-top">
           <!-- Paint roller/sealant icon -->
           <svg class="card-icon" width="32" height="32" viewBox="0 0 512 512" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
@@ -188,6 +198,11 @@
     white-space: nowrap;
   }
 
+  /* Dropdown */
+  .dropdown-wrap {
+    position: relative;
+  }
+
   .cta-blue {
     display: inline-flex;
     align-items: center;
@@ -226,6 +241,47 @@
 
   .cta-blue:hover::before {
     width: 100%;
+  }
+
+  .dropdown-chevron {
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .dropdown-wrap.open .dropdown-chevron {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: calc(100% + 4px);
+    left: 0;
+    min-width: 100%;
+    background: var(--bg);
+    border: 1px solid rgba(232, 232, 232, 0.2);
+    display: none;
+    flex-direction: column;
+    z-index: 10;
+  }
+
+  .dropdown-wrap.open .dropdown-menu {
+    display: flex;
+  }
+
+  .dropdown-item {
+    font-family: var(--font-heading);
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    padding: 14px 24px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+
+  .dropdown-item:hover {
+    background: var(--blue-primary);
+    color: var(--white-full);
   }
 
   .top-right-sub {
@@ -520,3 +576,22 @@
     }
   }
 </style>
+
+<script>
+  const toggle = document.querySelector('.dropdown-toggle');
+  const wrap = document.querySelector('.dropdown-wrap');
+
+  if (toggle && wrap) {
+    toggle.addEventListener('click', () => {
+      const isOpen = wrap.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(isOpen));
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!wrap.contains(e.target as Node)) {
+        wrap.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  }
+</script>

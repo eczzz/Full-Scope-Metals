@@ -5,7 +5,7 @@
 <section class="contact-hero">
   <div class="contact-hero-bg">
     <img
-      src="/full-scope-metals-contact-2.webp"
+      src="/full-scope-contact-hero-bg.webp"
       alt="Full Scope Metals fabrication facility"
       class="contact-hero-bg-img"
       width="1440"
@@ -18,18 +18,14 @@
   <div class="contact-hero-inner">
     <!-- Left: Headline Block -->
     <div class="hero-primary">
-      <div class="hero-marker hero-fade-up" style="--hero-delay: 0.1s">
-        <span class="marker-line"></span>
-        <span class="marker-text">Contact</span>
-      </div>
+      <p class="section-label hero-fade-up" style="--hero-delay: 0.1s">Contact</p>
 
       <h1 class="hero-headline hero-fade-up" style="--hero-delay: 0.3s">
         We Pick Up<br />the Phone.
       </h1>
 
       <p class="hero-sub hero-fade-up" style="--hero-delay: 0.5s">
-        You've been on a roof all day. You need materials, not a phone tree.<br class="desktop-br" />
-        Tell us what you're building — we'll get it fabricated.
+        Real people, real answers. Call us directly or send a quote request and we'll get back to you fast.
       </p>
     </div>
 
@@ -40,7 +36,7 @@
         <span class="strip-label">Call Direct</span>
         <a href="tel:9702812982" class="strip-phone">(970) 281-2982</a>
         <div class="strip-divider"></div>
-        <span class="strip-hours">Mon – Sat &nbsp;·&nbsp; 7:30A – 5:30P</span>
+        <span class="strip-hours">Mon - Sat &nbsp;·&nbsp; 7:30A - 5:30P</span>
         <a href="#contact-form" class="strip-cta">
           <span class="strip-cta-text">Or Send a Quote Request</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -54,6 +50,16 @@
   <!-- Blue Divider -->
   <div class="hero-divider"></div>
 </section>
+
+<script>
+  document.querySelector('.strip-cta')?.addEventListener('click', (e) => {
+    e.preventDefault();
+    const target = document.querySelector('#contact-form');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+</script>
 
 <style>
   /* ===========================
@@ -99,9 +105,6 @@
     position: relative;
     background: var(--bg);
     overflow: hidden;
-    min-height: 520px;
-    display: flex;
-    flex-direction: column;
   }
 
   /* Background Image */
@@ -132,18 +135,17 @@
       linear-gradient(to bottom, rgba(23, 23, 23, 1) 0%, transparent 20%, transparent 80%, rgba(23, 23, 23, 1) 100%);
   }
 
-  /* Inner Grid */
   .contact-hero-inner {
     position: relative;
     z-index: 1;
     max-width: 1440px;
+    width: 100%;
     margin: 0 auto;
     padding: 80px 100px 72px;
-    display: grid;
-    grid-template-columns: 1fr 320px;
-    gap: 80px;
+    display: flex;
     align-items: center;
-    flex: 1;
+    justify-content: space-between;
+    gap: 80px;
   }
 
   /* ===========================
@@ -153,31 +155,17 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    flex: 1;
+    min-width: 0;
   }
 
-  /* Marker — tagline with horizontal line */
-  .hero-marker {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .marker-line {
-    display: block;
-    width: 48px;
-    height: 2px;
-    background: var(--blue-primary);
-    flex-shrink: 0;
-  }
-
-  .marker-text {
+  .section-label {
     font-family: var(--font-heading);
-    font-size: 18px;
+    font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--blue-accent);
+    color: var(--white);
+    margin-bottom: 20px;
   }
 
   /* Headline */
@@ -209,6 +197,8 @@
     position: relative;
     display: flex;
     align-self: center;
+    flex-shrink: 0;
+    width: 320px;
   }
 
   .strip-accent {
@@ -337,9 +327,12 @@
      =========================== */
   @media (max-width: 1200px) {
     .contact-hero-inner {
-      padding: 72px 80px 64px;
+      padding: 72px 60px 64px;
       gap: 60px;
-      grid-template-columns: 1fr 300px;
+    }
+
+    .hero-contact-strip {
+      width: 300px;
     }
 
     .hero-headline {
@@ -359,14 +352,13 @@
      Responsive — 1024px
      =========================== */
   @media (max-width: 1024px) {
-    .contact-hero {
-      min-height: 460px;
+    .contact-hero-inner {
+      padding: 64px 40px 56px;
+      gap: 48px;
     }
 
-    .contact-hero-inner {
-      padding: 64px 48px 56px;
-      gap: 48px;
-      grid-template-columns: 1fr 280px;
+    .hero-contact-strip {
+      width: 280px;
     }
 
     .hero-headline {
@@ -416,14 +408,14 @@
       animation-delay: 0.5s;
     }
 
-    .contact-hero {
-      min-height: auto;
-    }
-
     .contact-hero-inner {
       padding: 48px 24px 40px;
-      grid-template-columns: 1fr;
+      flex-direction: column;
       gap: 32px;
+    }
+
+    .hero-contact-strip {
+      width: 100%;
     }
 
     .contact-hero-overlay {
@@ -443,16 +435,8 @@
       line-height: 165%;
     }
 
-    .desktop-br {
-      display: none;
-    }
-
-    .marker-line {
-      width: 36px;
-    }
-
-    .marker-text {
-      font-size: 15px;
+    .section-label {
+      font-size: 18px;
     }
 
     /* Strip becomes full-width card */
@@ -530,7 +514,7 @@
     }
 
     /* Compress animation delay schedule for mobile */
-    .hero-marker.hero-fade-up { animation-delay: 0.05s; }
+    .section-label.hero-fade-up { animation-delay: 0.05s; }
     .hero-headline.hero-fade-up { animation-delay: 0.15s; }
     .hero-sub.hero-fade-up { animation-delay: 0.25s; }
     .hero-contact-strip.hero-fade-up { animation-delay: 0.3s; }
@@ -545,16 +529,9 @@
       gap: 28px;
     }
 
-    .hero-marker {
+    .section-label {
+      font-size: 16px;
       margin-bottom: 14px;
-    }
-
-    .marker-line {
-      width: 28px;
-    }
-
-    .marker-text {
-      font-size: 13px;
     }
 
     .hero-headline {

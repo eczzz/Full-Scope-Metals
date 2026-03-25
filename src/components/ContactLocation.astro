@@ -7,7 +7,7 @@
   <div class="location-visual">
     <div class="location-img-wrapper">
       <img
-        src="/full-scope-metals-contact-1.webp"
+        src="/visit-our-kremmling-shop-bg.webp"
         alt="Highway cutting through Colorado mountains toward Kremmling"
         class="location-bg-img"
         width="1440"
@@ -31,12 +31,9 @@
             <span class="elevation-unit">Feet</span>
           </div>
           <div class="invite-text">
-            <div class="invite-marker">
-              <span class="invite-line"></span>
-              <span class="invite-label">Kremmling, Colorado</span>
-            </div>
+            <p class="section-label">Kremmling, Colorado</p>
             <h2 class="invite-headline">Come See<br />the Shop.</h2>
-            <p class="invite-sub">We're not behind a desk in Denver. We're up in the mountains, fabricating metal where the air is thin and the standards are high. Drop by — we'll show you around.</p>
+            <p class="invite-sub">We're not behind a desk in Denver. We're up in the mountains, fabricating metal where the air is thin and the standards are high. Drop by, we'll show you around.</p>
           </div>
         </div>
 
@@ -57,7 +54,7 @@
                   <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2"/>
                   <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-                <span>Mon – Sat · 7:30A – 5:30P</span>
+                <span>Mon - Sat · 7:30A - 5:30P</span>
               </div>
               <div class="card-detail-row">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
@@ -79,23 +76,6 @@
     </div>
   </div>
 
-  <!-- Secondary image strip — Colorado landscape -->
-  <div class="location-landscape scroll-reveal" style="--delay: 0.1s">
-    <div class="landscape-img-wrapper">
-      <img
-        src="/full-scope-metals-colorado.webp"
-        alt="Colorado mountain landscape near Kremmling"
-        class="landscape-img"
-        width="1440"
-        height="280"
-        loading="lazy"
-      />
-    </div>
-    <div class="landscape-overlay"></div>
-    <div class="landscape-text">
-      <span class="landscape-tagline">Built at Altitude. Tested by Weather. Trusted by Contractors.</span>
-    </div>
-  </div>
 </section>
 
 
@@ -230,28 +210,13 @@
   }
 
   /* Invite text */
-  .invite-marker {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 20px;
-  }
-
-  .invite-line {
-    display: block;
-    width: 48px;
-    height: 2px;
-    background: var(--blue-primary);
-    flex-shrink: 0;
-  }
-
-  .invite-label {
+  .section-label {
     font-family: var(--font-heading);
-    font-size: 16px;
+    font-size: 20px;
     font-weight: 400;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    color: var(--blue-accent);
+    color: var(--white);
+    margin-bottom: 20px;
   }
 
   .invite-headline {
@@ -409,65 +374,6 @@
     transform: translate(3px, -3px);
   }
 
-  /* ===========================
-     Landscape Strip
-     =========================== */
-  .location-landscape {
-    position: relative;
-    height: 200px;
-    overflow: hidden;
-  }
-
-  .landscape-img-wrapper {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-
-  .landscape-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 60%;
-    transition: transform 8s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .location-landscape:hover .landscape-img {
-    transform: scale(1.05);
-  }
-
-  .landscape-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(23, 23, 23, 0.7);
-    z-index: 1;
-  }
-
-  .landscape-text {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    padding: 0 100px;
-  }
-
-  .landscape-tagline {
-    font-family: var(--font-heading);
-    font-size: 24px;
-    font-weight: 400;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: var(--white);
-    text-align: center;
-    line-height: 150%;
-  }
 
   /* ===========================
      Responsive — 1200px
@@ -511,13 +417,6 @@
       font-size: 24px;
     }
 
-    .landscape-tagline {
-      font-size: 20px;
-    }
-
-    .landscape-text {
-      padding: 0 60px;
-    }
   }
 
   /* ===========================
@@ -559,16 +458,9 @@
       gap: 28px;
     }
 
-    .invite-marker {
+    .section-label {
+      font-size: 18px;
       margin-bottom: 16px;
-    }
-
-    .invite-line {
-      width: 36px;
-    }
-
-    .invite-label {
-      font-size: 14px;
     }
 
     .card-inner {
@@ -591,18 +483,6 @@
       font-size: 14px;
     }
 
-    .location-landscape {
-      height: 160px;
-    }
-
-    .landscape-tagline {
-      font-size: 18px;
-      letter-spacing: 0.08em;
-    }
-
-    .landscape-text {
-      padding: 0 40px;
-    }
   }
 
   /* ===========================
@@ -668,15 +548,8 @@
       line-height: 165%;
     }
 
-    .invite-line {
-      width: 28px;
-    }
-
-    .invite-label {
-      font-size: 13px;
-    }
-
-    .invite-marker {
+    .section-label {
+      font-size: 18px;
       margin-bottom: 10px;
     }
 
@@ -739,28 +612,13 @@
       color: var(--blue-accent);
     }
 
-    /* Landscape strip */
-    .location-landscape {
-      height: 110px;
-    }
-
-    .landscape-text {
-      padding: 0 24px;
-    }
-
-    .landscape-tagline {
-      font-size: 13px;
-      letter-spacing: 0.06em;
-      line-height: 170%;
-    }
 
     .location-accent-top {
       height: 3px;
     }
 
-    /* Disable hover-zoom on touch — it just sticks awkwardly */
-    .location-visual:hover .location-bg-img,
-    .location-landscape:hover .landscape-img {
+    /* Disable hover-zoom on touch */
+    .location-visual:hover .location-bg-img {
       transform: none;
     }
   }
@@ -800,15 +658,8 @@
       line-height: 160%;
     }
 
-    .invite-line {
-      width: 24px;
-    }
-
-    .invite-label {
-      font-size: 12px;
-    }
-
-    .invite-marker {
+    .section-label {
+      font-size: 16px;
       margin-bottom: 8px;
     }
 
@@ -847,21 +698,6 @@
 
     .card-directions-text {
       font-size: 13px;
-    }
-
-    /* Landscape — tighter but still readable */
-    .location-landscape {
-      height: 90px;
-    }
-
-    .landscape-tagline {
-      font-size: 11px;
-      letter-spacing: 0.04em;
-      line-height: 175%;
-    }
-
-    .landscape-text {
-      padding: 0 16px;
     }
 
     /* Even shorter reveal travel at small screens */
