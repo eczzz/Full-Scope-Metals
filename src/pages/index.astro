@@ -18,7 +18,7 @@ import Footer from '../components/Footer.astro';
         <p class="tagline hero-fade-up" style="--hero-delay: 0.2s">Based in Kremmling, Colorado</p>
         <h1 class="headline hero-fade-up" style="--hero-delay: 0.4s">
           Custom Metal Roofing Products.
-          <span class="headline-sub">Built by People Who've Installed Them.</span>
+          <span class="headline-sub headline-accent">Built by People Who've Installed Them.</span>
         </h1>
 
         <div class="subtext-row hero-fade-up" style="--hero-delay: 0.6s">
@@ -147,6 +147,10 @@ import Footer from '../components/Footer.astro';
     text-align: right;
   }
 
+  .headline-accent {
+    color: var(--blue-accent);
+  }
+
   .subtext-row {
     display: flex;
     align-items: center;
@@ -224,13 +228,14 @@ import Footer from '../components/Footer.astro';
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--white);
+    background: var(--blue-accent);
     z-index: -1;
     transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .cta-outline:hover {
-    color: var(--bg);
+    color: var(--black);
+    border-color: var(--blue-accent);
   }
 
   .cta-outline:hover::before {

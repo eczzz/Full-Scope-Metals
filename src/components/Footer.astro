@@ -15,7 +15,7 @@
           width="127"
           height="69"
         />
-        <h2 class="tagline">Metal Roofing Products Built for the Field.</h2>
+        <h2 class="tagline">Metal Roofing Products <span class="headline-accent">Built for the Field.</span></h2>
         <p class="subtext">Custom fabrication and distribution out of Kremmling, Colorado.</p>
       </div>
 
@@ -44,10 +44,6 @@
           </a>
           <a href="/products" class="nav-row">
             <span class="nav-link">Products</span>
-            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4V14" stroke="#E8E8E8" stroke-width="1.5"/></svg>
-          </a>
-          <a href="/projects" class="nav-row">
-            <span class="nav-link">Projects</span>
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M4 16L16 4M16 4H6M16 4V14" stroke="#E8E8E8" stroke-width="1.5"/></svg>
           </a>
           <a href="/contact" class="nav-row">
@@ -90,6 +86,8 @@
 
   .footer-logo {
     display: block;
+    width: 180px;
+    height: auto;
     margin-bottom: 32px;
     transition: transform 0.3s ease, filter 0.3s ease;
   }
@@ -97,6 +95,10 @@
   .footer-logo:hover {
     transform: scale(1.05);
     filter: brightness(1.15);
+  }
+
+  .headline-accent {
+    color: var(--blue-accent);
   }
 
   .tagline {
@@ -227,19 +229,12 @@
     margin-top: 60px;
     white-space: nowrap;
     letter-spacing: 0;
-    background: linear-gradient(90deg, var(--blue-accent), var(--white));
-    background-size: 200% 100%;
-    background-position: 100% 0;
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: var(--white);
-    transition: letter-spacing 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), background-position 0.6s ease, -webkit-text-fill-color 0.6s ease;
+    transition: letter-spacing 0.6s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.6s ease;
   }
 
   .wordmark:hover {
     letter-spacing: 8px;
-    background-position: 0 0;
-    -webkit-text-fill-color: transparent;
+    color: var(--blue-primary);
   }
 
   /* Tablet */
@@ -306,16 +301,6 @@
     .wordmark {
       font-size: 60px;
       white-space: normal;
-      background: none;
-      -webkit-background-clip: unset;
-      background-clip: unset;
-      -webkit-text-fill-color: var(--blue-primary);
-      color: var(--blue-primary);
-    }
-
-    .wordmark:hover {
-      -webkit-text-fill-color: var(--blue-accent);
-      color: var(--blue-accent);
     }
   }
 </style>

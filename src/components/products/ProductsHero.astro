@@ -75,7 +75,16 @@
 
       <a href="#snow-guards" class="manifest-row" style="--row-i: 5">
         <span class="manifest-number">06</span>
-        <span class="manifest-name">Snow Guards</span>
+        <span class="manifest-name">Snow Retention</span>
+        <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+      <a href="#underlayments" class="manifest-row manifest-row--featured" style="--row-i: 6">
+        <span class="manifest-number">07</span>
+        <span class="manifest-name">Underlayments</span>
+        <span class="manifest-badge">Coming Soon</span>
         <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path d="M7 17L17 7M17 7H9M17 7V15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
@@ -264,13 +273,14 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--white);
+    background: var(--blue-accent);
     z-index: -1;
     transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .cta-outline:hover {
-    color: var(--bg);
+    color: var(--black);
+    border-color: var(--blue-accent);
   }
 
   .cta-outline:hover::before {
@@ -396,6 +406,48 @@
   .manifest-row:hover .manifest-arrow {
     color: var(--blue-accent);
     transform: translate(3px, -3px);
+  }
+
+  /* Featured Manifest Row (Underlayments) */
+  .manifest-row--featured {
+    border-bottom-color: rgba(245, 197, 24, 0.2);
+  }
+
+  .manifest-row--featured .manifest-number {
+    color: #F5C518;
+  }
+
+  .manifest-row--featured .manifest-name {
+    color: #F5C518;
+  }
+
+  .manifest-row--featured::before {
+    background: #F5C518;
+  }
+
+  .manifest-row--featured:hover {
+    background: rgba(245, 197, 24, 0.08);
+  }
+
+  .manifest-row--featured:hover .manifest-number,
+  .manifest-row--featured:hover .manifest-name {
+    color: #F5C518;
+  }
+
+  .manifest-row--featured:hover .manifest-arrow {
+    color: #F5C518;
+  }
+
+  .manifest-badge {
+    font-family: var(--font-heading);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--black);
+    background: #F5C518;
+    padding: 3px 10px;
+    flex-shrink: 0;
   }
 
   /* ===========================

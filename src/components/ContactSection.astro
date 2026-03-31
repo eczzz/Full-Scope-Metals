@@ -22,7 +22,7 @@
           <span class="banner-label">Get Started</span>
           <span class="banner-label">Get Started</span>
         </div>
-        <h2 class="banner-headline">Let's Build Something That Lasts.</h2>
+        <h2 class="banner-headline">Let's Build Something <span class="headline-accent">That Lasts.</span></h2>
       </div>
 
       <div class="banner-img banner-img-right">
@@ -190,6 +190,10 @@
     font-weight: 400;
     text-transform: uppercase;
     color: var(--white);
+  }
+
+  .headline-accent {
+    color: var(--blue-accent);
   }
 
   .banner-headline {
@@ -453,13 +457,14 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--white);
+    background: var(--blue-accent);
     z-index: -1;
     transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .submit-btn:hover {
-    color: var(--bg);
+    color: var(--black);
+    border-color: var(--blue-accent);
   }
 
   .submit-btn:hover::before {

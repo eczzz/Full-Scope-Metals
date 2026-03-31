@@ -9,14 +9,14 @@
       <div class="top-left scroll-reveal">
         <div class="accent-text-row">
           <div class="accent-bar-vertical"></div>
-          <p class="sub-text">Every project is custom.<br />Every panel is fabricated in-house.</p>
+          <p class="sub-text">Every project is custom.<br />Fabricated in-house or sourced from trusted partners.</p>
         </div>
-        <a href="/projects" class="view-projects-btn">View All Projects</a>
+        <a href="/about" class="view-projects-btn">Learn More About Us</a>
       </div>
 
       <div class="top-right scroll-reveal" style="--delay: 0.15s">
         <p class="section-label">By The Numbers</p>
-        <h2 class="section-headline">Built to Last. Built to Spec. Why Full Scope Metals.</h2>
+        <h2 class="section-headline">Built to Last. Built to Spec. <span class="headline-accent">Why Full Scope Metals.</span></h2>
       </div>
     </div>
 
@@ -75,7 +75,7 @@
         </div>
         <div class="stat-info">
           <h3 class="stat-title">Product Categories in Stock</h3>
-          <p class="stat-value">6+</p>
+          <p class="stat-value">7+</p>
         </div>
       </div>
 
@@ -94,7 +94,7 @@
         </div>
         <div class="stat-info">
           <h3 class="stat-title">Average Turnaround Time</h3>
-          <p class="stat-value">5 Days</p>
+          <p class="stat-value">~5 Days</p>
         </div>
       </div>
     </div>
@@ -185,13 +185,14 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--white);
+    background: var(--blue-accent);
     z-index: -1;
     transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .view-projects-btn:hover {
-    color: var(--bg);
+    color: var(--black);
+    border-color: var(--blue-accent);
   }
 
   .view-projects-btn:hover::before {
@@ -200,6 +201,10 @@
 
   .top-right {
     max-width: 813px;
+  }
+
+  .headline-accent {
+    color: var(--blue-accent);
   }
 
   .section-label {

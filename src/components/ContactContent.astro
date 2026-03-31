@@ -8,7 +8,7 @@
     <!-- Section Intro -->
     <div class="content-intro scroll-reveal">
       <p class="section-label">Request a Quote</p>
-      <h2 class="intro-headline">Tell Us What<br />You're Building.</h2>
+      <h2 class="intro-headline">Tell Us What<br /><span class="headline-accent">You're Building.</span></h2>
       <p class="intro-sub">Panels, trim, accessories, custom to your spec. Fill out the form or pick up the phone. Either way, you'll talk to someone who's been on a roof.</p>
     </div>
 
@@ -45,7 +45,7 @@
                 <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </button>
-            <span class="form-note">We respond within one business day. Usually faster.</span>
+            <span class="form-note">We aim to respond within one business day.</span>
           </div>
         </form>
       </div>
@@ -96,7 +96,7 @@
 
           <!-- Turnaround badge -->
           <div class="sidebar-badge">
-            <span class="badge-number">5</span>
+            <span class="badge-number">~5</span>
             <span class="badge-text">Day Avg.<br />Turnaround</span>
           </div>
 
@@ -136,6 +136,10 @@
     text-transform: uppercase;
     color: var(--white);
     margin-bottom: 20px;
+  }
+
+  .headline-accent {
+    color: var(--blue-accent);
   }
 
   .intro-headline {
@@ -314,13 +318,14 @@
     left: 0;
     width: 0;
     height: 100%;
-    background: var(--white);
+    background: var(--blue-accent);
     z-index: -1;
     transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .submit-btn:hover {
-    color: var(--bg);
+    color: var(--black);
+    border-color: var(--blue-accent);
   }
 
   .submit-btn:hover::before {
@@ -780,7 +785,8 @@
 
     /* Active state replaces hover on touch devices */
     .submit-btn:active {
-      color: var(--bg);
+      color: var(--black);
+      border-color: var(--blue-accent);
     }
 
     .submit-btn:active::before {
