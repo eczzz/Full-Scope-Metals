@@ -95,20 +95,24 @@
           <div style="height: 4rem;"></div>
           <div class="form-grid">
             <div class="form-field">
-              <input type="text" name="full_name" placeholder="Full Name*" required aria-label="Full Name" />
+              <label class="form-label" for="cs-full-name">Full Name*</label>
+              <input id="cs-full-name" type="text" name="full_name" required aria-label="Full Name" />
             </div>
             <div class="form-field">
-              <input type="email" name="email" placeholder="Email Address*" required aria-label="Email Address" />
+              <label class="form-label" for="cs-email">Email Address*</label>
+              <input id="cs-email" type="email" name="email" required aria-label="Email Address" />
             </div>
             <div class="form-field">
-              <input type="tel" name="phone" placeholder="Phone Number*" required aria-label="Phone Number" />
+              <label class="form-label" for="cs-phone">Phone Number*</label>
+              <input id="cs-phone" type="tel" name="phone" required aria-label="Phone Number" />
             </div>
             <div class="form-field">
-              <input type="text" name="subject" placeholder="Subject*" required aria-label="Subject" />
+              <label class="form-label" for="cs-subject">Subject*</label>
+              <input id="cs-subject" type="text" name="subject" required aria-label="Subject" />
             </div>
             <div class="form-field form-field-full">
-              <span class="textarea-label">Message*</span>
-              <textarea name="message" placeholder="Tell us about your project, materials needed, or timeline." rows="4" required aria-label="Message"></textarea>
+              <label class="form-label" for="cs-message">Message*</label>
+              <textarea id="cs-message" name="message" placeholder="Tell us about your project, materials needed, or timeline." rows="4" required aria-label="Message"></textarea>
             </div>
           </div>
 
@@ -359,30 +363,7 @@
     grid-column: 1 / -1;
   }
 
-  .form-field input,
-  .form-field textarea {
-    width: 100%;
-    background: transparent;
-    border: none;
-    border-top: 1px solid rgba(232, 232, 232, 0.5);
-    padding: 12px 0 8px;
-    font-family: var(--font-heading);
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--white-full);
-    outline: none;
-    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .form-field input::placeholder {
-    font-family: var(--font-heading);
-    font-size: 20px;
-    font-weight: 500;
-    color: var(--white-muted);
-    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-  }
-
-  .textarea-label {
+  .form-label {
     display: block;
     font-family: var(--font-heading);
     font-size: 20px;
@@ -392,9 +373,19 @@
     transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
-  .form-field:hover .textarea-label,
-  .form-field:focus-within .textarea-label {
-    color: var(--blue-primary);
+  .form-field input,
+  .form-field textarea {
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(232, 232, 232, 0.5);
+    padding: 8px 0 12px;
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--white-full);
+    outline: none;
+    transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .form-field textarea::placeholder {
@@ -411,38 +402,22 @@
     font-size: 16px;
     font-weight: 500;
     line-height: 150%;
-    border-top: none;
-    border-bottom: 1px solid rgba(232, 232, 232, 0.5);
-    padding: 8px 0 12px;
+  }
+
+  .form-field:hover .form-label,
+  .form-field:focus-within .form-label {
+    color: var(--blue-primary);
   }
 
   .form-field:hover input,
-  .form-field:hover textarea {
-    border-top-color: var(--blue-primary);
-    color: var(--blue-primary);
-  }
-
-  .form-field:hover input::placeholder,
-  .form-field:hover textarea::placeholder {
-    color: var(--blue-primary);
-  }
-
-  .form-field:hover textarea {
-    border-top-color: transparent;
-    border-bottom-color: var(--blue-primary);
-  }
-
+  .form-field:hover textarea,
   .form-field input:focus,
   .form-field textarea:focus {
-    border-top-color: var(--blue-primary);
-  }
-
-  .form-field textarea:focus {
-    border-top-color: transparent;
     border-bottom-color: var(--blue-primary);
+    color: var(--blue-primary);
   }
 
-  .form-field input:focus::placeholder,
+  .form-field:hover textarea::placeholder,
   .form-field textarea:focus::placeholder {
     color: var(--blue-primary);
   }
