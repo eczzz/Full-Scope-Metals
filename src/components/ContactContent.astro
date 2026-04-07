@@ -242,6 +242,20 @@
     transition: border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
+  /* Override browser autofill styling */
+  .form-field input:-webkit-autofill,
+  .form-field input:-webkit-autofill:hover,
+  .form-field input:-webkit-autofill:focus,
+  .form-field textarea:-webkit-autofill,
+  .form-field textarea:-webkit-autofill:hover,
+  .form-field textarea:-webkit-autofill:focus {
+    -webkit-text-fill-color: var(--white-full);
+    -webkit-box-shadow: 0 0 0 1000px var(--bg) inset;
+    box-shadow: 0 0 0 1000px var(--bg) inset;
+    caret-color: var(--white-full);
+    transition: background-color 5000s ease-in-out 0s;
+  }
+
   .form-field-message {
     margin-top: 16px;
   }
