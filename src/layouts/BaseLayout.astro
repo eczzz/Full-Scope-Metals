@@ -20,8 +20,54 @@ const { title, description = "Full Scope Metals - Custom metal roofing products 
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content={description} />
+    <link rel="canonical" href="" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>{title}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="en_US" />
+
+    <!-- Structured Data: Local Business / Roofing Contractor -->
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "RoofingContractor",
+      "name": "Full Scope Metals",
+      "description": "Custom metal roofing products fabricated and sourced for contractors. Standing seam panels, trims, flashing, fasteners, sealants, snow retention, and underlayments.",
+      "url": "https://fullscopemetals.com",
+      "telephone": "+1-970-281-2982",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5871 Co Hwy 22",
+        "addressLocality": "Kremmling",
+        "addressRegion": "CO",
+        "postalCode": "80459",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.0586,
+        "longitude": -106.3886
+      },
+      "openingHoursSpecification": [{
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "07:30",
+        "closes": "17:30"
+      }],
+      "areaServed": {
+        "@type": "State",
+        "name": "Colorado"
+      },
+      "founder": {
+        "@type": "Person",
+        "name": "Matt Johnson"
+      },
+      "foundingDate": "2024"
+    })} />
   </head>
   <body>
     <slot />
