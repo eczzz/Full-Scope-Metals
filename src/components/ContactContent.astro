@@ -17,7 +17,18 @@
 
       <!-- Form Column — takes the stage -->
       <div class="form-column scroll-reveal" style="--delay: 0.15s">
-        <form method="POST" action="#" class="quote-form">
+        <form
+          name="contact"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/?contact-success=true"
+          class="quote-form"
+        >
+          <input type="hidden" name="form-name" value="contact" />
+          <p class="hidden-field">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
           <div class="form-row-pair">
             <div class="form-field">
               <input type="text" name="full_name" placeholder="Full Name*" required aria-label="Full Name" />
@@ -183,6 +194,14 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+  }
+
+  .hidden-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 
   .form-row-pair {

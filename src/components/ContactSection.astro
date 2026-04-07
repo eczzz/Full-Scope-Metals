@@ -80,7 +80,18 @@
       <div class="form-col scroll-reveal" style="--delay: 0.2s">
         <h2 class="form-heading">Get a Quote</h2>
 
-        <form method="POST" action="#" class="quote-form">
+        <form
+          name="quote-cta"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field"
+          action="/?quote-success=true"
+          class="quote-form"
+        >
+          <input type="hidden" name="form-name" value="quote-cta" />
+          <p class="hidden-field">
+            <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+          </p>
           <div style="height: 4rem;"></div>
           <div class="form-grid">
             <div class="form-field">
@@ -328,6 +339,14 @@
 
   .quote-form {
     margin-top: 4rem;
+  }
+
+  .hidden-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
   }
 
   .form-grid {
