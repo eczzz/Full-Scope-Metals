@@ -22,7 +22,7 @@
           method="POST"
           data-netlify="true"
           netlify-honeypot="bot-field"
-          action="/?contact-success=true"
+          action="/thank-you"
           class="quote-form"
         >
           <input type="hidden" name="form-name" value="contact" />
@@ -448,12 +448,16 @@
     font-weight: 400;
     color: var(--white);
     line-height: 155%;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .sidebar-hours-block .sidebar-value:hover {
+    color: var(--blue-accent);
   }
 
   .sidebar-address-link {
     display: block;
     text-decoration: none;
-    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
 
   .sidebar-address-link:hover {

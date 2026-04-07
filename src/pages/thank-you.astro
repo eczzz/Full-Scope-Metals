@@ -1,0 +1,444 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<BaseLayout
+  title="Thank You - Full Scope Metals"
+  description="Thanks for reaching out to Full Scope Metals. We'll be in touch shortly about your custom metal roofing project."
+>
+  <Header />
+
+  <main>
+    <section class="thank-you-hero">
+      <div class="thank-you-bg">
+        <img
+          src="/full-scope-contact-hero-bg.webp"
+          alt="Full Scope Metals fabrication facility"
+          class="thank-you-bg-img"
+          width="1440"
+          height="600"
+        />
+        <div class="thank-you-overlay"></div>
+      </div>
+
+      <div class="thank-you-inner">
+        <p class="section-label hero-fade-up" style="--hero-delay: 0.1s">Message Received</p>
+
+        <h1 class="hero-headline hero-fade-up" style="--hero-delay: 0.3s">
+          Thanks. <span class="headline-accent">We've Got It.</span>
+        </h1>
+
+        <p class="hero-sub hero-fade-up" style="--hero-delay: 0.5s">
+          Your request just landed in our shop. A real person will review it and reach back out to you soon. In the meantime, feel free to call us directly or take another look around.
+        </p>
+
+        <div class="cta-row hero-fade-up" style="--hero-delay: 0.7s">
+          <a href="/" class="cta-outline">Return to Home</a>
+          <a href="/products" class="cta-outline cta-outline--ghost">See Our Products</a>
+        </div>
+
+        <div class="contact-strip hero-fade-up" style="--hero-delay: 0.85s">
+          <div class="strip-accent"></div>
+          <div class="strip-content">
+            <div class="strip-row">
+              <span class="strip-label">Call Direct</span>
+              <a href="tel:9702812982" class="strip-value">(970) 281-2982</a>
+            </div>
+            <div class="strip-divider"></div>
+            <div class="strip-row">
+              <span class="strip-label">Hours</span>
+              <span class="strip-value">Mon - Sat &nbsp;·&nbsp; 7:30A - 5:30P</span>
+            </div>
+            <div class="strip-divider"></div>
+            <div class="strip-row">
+              <span class="strip-label">Shop</span>
+              <a href="https://maps.google.com/?q=5871+Co+Hwy+22+Kremmling+CO+80459" target="_blank" rel="noopener" class="strip-value">5871 Co Hwy 22, Kremmling, CO</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-divider"></div>
+    </section>
+
+    <Footer />
+  </main>
+</BaseLayout>
+
+<style>
+  /* ===========================
+     Hero Load Animations
+     =========================== */
+  @keyframes heroFadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes dividerExpand {
+    from { transform: scaleX(0); }
+    to   { transform: scaleX(1); }
+  }
+
+  .hero-fade-up {
+    opacity: 0;
+    animation: heroFadeUp 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: var(--hero-delay, 0s);
+  }
+
+  /* ===========================
+     Layout
+     =========================== */
+  .thank-you-hero {
+    position: relative;
+    background: var(--bg);
+    overflow: hidden;
+  }
+
+  .thank-you-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  .thank-you-bg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+  }
+
+  .thank-you-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+      linear-gradient(135deg, rgba(23, 23, 23, 0.95) 0%, rgba(23, 23, 23, 0.9) 50%, rgba(23, 23, 23, 0.85) 100%),
+      linear-gradient(to bottom, rgba(23, 23, 23, 1) 0%, transparent 20%, transparent 80%, rgba(23, 23, 23, 1) 100%);
+  }
+
+  .thank-you-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 120px 100px 100px;
+    text-align: center;
+  }
+
+  /* ===========================
+     Headline + Copy
+     =========================== */
+  .section-label {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    margin-bottom: 20px;
+  }
+
+  .headline-accent {
+    color: var(--blue-accent);
+  }
+
+  .hero-headline {
+    font-family: var(--font-heading);
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white-full);
+    line-height: 105%;
+    margin-bottom: 28px;
+  }
+
+  .hero-sub {
+    font-family: var(--font-body);
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--white-muted);
+    line-height: 165%;
+    max-width: 640px;
+    margin: 0 auto 44px;
+  }
+
+  /* ===========================
+     CTA Row
+     =========================== */
+  .cta-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 64px;
+    flex-wrap: wrap;
+  }
+
+  .cta-outline {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--white);
+    border: 1px solid var(--white);
+    background: transparent;
+    padding: 16px 28px;
+    height: 58px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1), border-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-outline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--blue-accent);
+    z-index: -1;
+    transition: width 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .cta-outline:hover {
+    color: var(--black);
+    border-color: var(--blue-accent);
+  }
+
+  .cta-outline:hover::before {
+    width: 100%;
+  }
+
+  .cta-outline--ghost {
+    border-color: rgba(232, 232, 232, 0.4);
+    color: var(--white-muted);
+  }
+
+  .cta-outline--ghost:hover {
+    color: var(--black);
+  }
+
+  /* ===========================
+     Contact Strip
+     =========================== */
+  .contact-strip {
+    display: flex;
+    align-items: stretch;
+    max-width: 640px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .strip-accent {
+    width: 4px;
+    background: var(--blue-primary);
+    flex-shrink: 0;
+  }
+
+  .strip-content {
+    flex: 1;
+    padding: 28px 32px;
+    background: rgba(23, 23, 23, 0.6);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(232, 232, 232, 0.08);
+    border-left: none;
+  }
+
+  .strip-row {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 6px 0;
+  }
+
+  .strip-label {
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--blue-accent);
+    flex-shrink: 0;
+  }
+
+  .strip-value {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white-full);
+    text-decoration: none;
+    text-align: right;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .strip-value:hover {
+    color: var(--blue-accent);
+  }
+
+  .strip-divider {
+    width: 100%;
+    height: 1px;
+    background: rgba(232, 232, 232, 0.1);
+    margin: 8px 0;
+  }
+
+  /* ===========================
+     Hero Divider
+     =========================== */
+  .hero-divider {
+    width: 100%;
+    height: 18px;
+    background: var(--blue-primary);
+    transform-origin: left;
+    transform: scaleX(0);
+    animation: dividerExpand 0.8s cubic-bezier(0.25, 0.1, 0.25, 1) forwards;
+    animation-delay: 0.95s;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* ===========================
+     Responsive — 1024px
+     =========================== */
+  @media (max-width: 1024px) {
+    .thank-you-inner {
+      padding: 96px 48px 80px;
+    }
+
+    .hero-headline {
+      font-size: 56px;
+    }
+
+    .hero-sub {
+      font-size: 17px;
+    }
+  }
+
+  /* ===========================
+     Responsive — 768px
+     =========================== */
+  @media (max-width: 768px) {
+    .hero-fade-up {
+      animation-duration: 0.5s;
+    }
+
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .thank-you-inner {
+      padding: 72px 24px 56px;
+    }
+
+    .section-label {
+      font-size: 16px;
+      margin-bottom: 14px;
+    }
+
+    .hero-headline {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .hero-sub {
+      font-size: 16px;
+      line-height: 165%;
+      margin-bottom: 32px;
+    }
+
+    .cta-row {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      margin-bottom: 44px;
+    }
+
+    .cta-outline {
+      width: 100%;
+      font-size: 16px;
+      height: 52px;
+    }
+
+    .contact-strip {
+      flex-direction: column;
+    }
+
+    .strip-accent {
+      width: 100%;
+      height: 3px;
+    }
+
+    .strip-content {
+      border: 1px solid rgba(232, 232, 232, 0.1);
+      border-top: none;
+      padding: 20px 20px;
+    }
+
+    .strip-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 4px;
+      padding: 8px 0;
+    }
+
+    .strip-value {
+      text-align: left;
+      font-size: 15px;
+    }
+
+    .hero-divider {
+      height: 10px;
+    }
+
+    .section-label.hero-fade-up { animation-delay: 0.05s; }
+    .hero-headline.hero-fade-up { animation-delay: 0.15s; }
+    .hero-sub.hero-fade-up { animation-delay: 0.25s; }
+    .cta-row.hero-fade-up { animation-delay: 0.35s; }
+    .contact-strip.hero-fade-up { animation-delay: 0.45s; }
+  }
+
+  /* ===========================
+     Responsive — 480px
+     =========================== */
+  @media (max-width: 480px) {
+    .thank-you-inner {
+      padding: 56px 16px 44px;
+    }
+
+    .hero-headline {
+      font-size: 32px;
+    }
+
+    .hero-sub {
+      font-size: 15px;
+    }
+  }
+</style>
