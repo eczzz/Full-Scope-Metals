@@ -32,7 +32,7 @@
               <a href="/products#fasteners-hardware" class="dropdown-item" role="menuitem">Fasteners & Hardware</a>
               <a href="/products#sealants-adhesives" class="dropdown-item" role="menuitem">Sealants & Adhesives</a>
               <a href="/products#snow-guards" class="dropdown-item" role="menuitem">Snow Retention</a>
-              <a href="/products#underlayments" class="dropdown-item" role="menuitem">Underlayments</a>
+              <a href="/flashdeck" class="dropdown-item" role="menuitem">Underlayments</a>
             </div>
           </div>
         </div>
@@ -137,7 +137,7 @@
 
     <!-- Row 3: Underlayments -->
     <div class="card-grid row-1">
-      <a href="/products#underlayments" class="card scroll-reveal" style="--delay: 0.1s">
+      <a href="/flashdeck" class="card scroll-reveal" style="--delay: 0.1s">
         <div class="card-top">
           <!-- Shield/layer icon -->
           <svg class="card-icon" width="32" height="32" viewBox="0 0 512 512" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
@@ -148,7 +148,7 @@
           </svg>
         </div>
         <h3 class="card-title">Underlayments</h3>
-        <p class="card-body">Wide variety of protective membranes for install beneath roofing products that blocks moisture.</p>
+        <p class="card-body">Protective membranes that block moisture and seal the deck, including Flash Deck&trade;, our featured butyl-based system.</p>
       </a>
     </div>
   </div>
@@ -654,10 +654,14 @@
 </style>
 
 <script>
-  const toggle = document.querySelector('.dropdown-toggle');
-  const wrap = document.querySelector('.dropdown-wrap');
+  function initProductDropdown() {
+    const toggle = document.querySelector<HTMLElement>('.dropdown-toggle');
+    const wrap = document.querySelector<HTMLElement>('.dropdown-wrap');
 
-  if (toggle && wrap) {
+    if (!toggle || !wrap) return;
+    if (wrap.dataset.fsDropdownInitialized === '1') return;
+    wrap.dataset.fsDropdownInitialized = '1';
+
     toggle.addEventListener('click', () => {
       const isOpen = wrap.classList.toggle('open');
       toggle.setAttribute('aria-expanded', String(isOpen));
@@ -670,4 +674,6 @@
       }
     });
   }
+
+  document.addEventListener('astro:page-load', initProductDropdown);
 </script>

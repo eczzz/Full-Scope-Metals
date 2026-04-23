@@ -81,7 +81,7 @@
         </svg>
       </a>
 
-      <a href="#underlayments" class="manifest-row" style="--row-i: 6">
+      <a href="/flashdeck" class="manifest-row manifest-row--fd" style="--row-i: 6">
         <span class="manifest-number">07</span>
         <span class="manifest-name">Underlayments</span>
         <svg class="manifest-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -97,16 +97,25 @@
 </section>
 
 <script>
-  document.querySelectorAll('.manifest-row').forEach(link => {
-    link.addEventListener('click', (e) => {
-      e.preventDefault();
-      const href = link.getAttribute('href');
-      const target = href ? document.querySelector(href) : null;
-      if (target) {
-        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
+  function initManifestSmoothScroll() {
+    document.querySelectorAll<HTMLAnchorElement>('.manifest-row').forEach(link => {
+      if (link.dataset.manifestInitialized === '1') return;
+      link.dataset.manifestInitialized = '1';
+
+      link.addEventListener('click', (e) => {
+        const href = link.getAttribute('href');
+        // Only intercept in-page anchor links for smooth scroll.
+        if (!href || !href.startsWith('#')) return;
+        const target = document.querySelector(href);
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
     });
-  });
+  }
+
+  document.addEventListener('astro:page-load', initManifestSmoothScroll);
 </script>
 
 <style>
@@ -407,30 +416,31 @@
     transform: translate(3px, -3px);
   }
 
-  /* Featured Manifest Row (Underlayments) */
-  .manifest-row--featured {
-    border-bottom-color: rgba(245, 197, 24, 0.2);
+  /* Flash Deck Manifest Row (Underlayments) */
+  .manifest-row--fd {
+    border-bottom-color: rgba(255, 197, 11, 0.2);
   }
 
-  .manifest-row--featured .manifest-number {
-    color: #F5C518;
+  .manifest-row--fd .manifest-number,
+  .manifest-row--fd .manifest-name {
+    color: #ffc50b;
   }
 
-  .manifest-row--featured .manifest-name {
-    color: #F5C518;
+  .manifest-row--fd::before {
+    background: #ffc50b;
   }
 
-  .manifest-row--featured::before {
-    background: #F5C518;
+  .manifest-row--fd:hover {
+    background: rgba(255, 197, 11, 0.08);
   }
 
-  .manifest-row--featured:hover {
-    background: rgba(245, 197, 24, 0.08);
+  .manifest-row--fd:hover .manifest-number,
+  .manifest-row--fd:hover .manifest-name {
+    color: #ffc50b;
   }
 
-  .manifest-row--featured:hover .manifest-number,
-  .manifest-row--featured:hover .manifest-name {
-    color: #F5C518;
+  .manifest-row--fd:hover .manifest-arrow {
+    color: #ffc50b;
   }
 
   .manifest-row--featured:hover .manifest-arrow {

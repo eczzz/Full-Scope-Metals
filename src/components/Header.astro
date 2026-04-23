@@ -2,7 +2,7 @@
 
 ---
 
-<header class="header" id="header">
+<header class="header" id="header" transition:persist>
   <div class="header-inner">
     <div class="header-top">
       <a href="/" class="logo-link">
@@ -21,7 +21,20 @@
         <a href="/contact" class="nav-link">Contact</a>
       </nav>
 
-      <a href="/contact" class="cta-button">Get a Quote</a>
+      <div class="header-cta-group">
+        <a href="/flashdeck" class="fd-nav-badge" aria-label="Learn about Flash Deck">
+          <img
+            src="/flash-deck-logo-3.webp"
+            alt="Flash Deck"
+            class="fd-nav-badge-logo"
+            width="800"
+            height="221"
+          />
+          <span class="fd-nav-badge-cta">Learn More</span>
+        </a>
+
+        <a href="/contact" class="cta-button">Get a Quote</a>
+      </div>
 
       <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
         <span class="bar"></span>
@@ -66,9 +79,16 @@
           <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </a>
+      <a href="/flashdeck" class="mobile-nav-item mobile-nav-item--flashdeck" style="--i: 4">
+        <span class="mobile-nav-number">05</span>
+        <span class="mobile-nav-text">Flash Deck<span class="fd-nav-badge-tm">™</span></span>
+        <svg class="mobile-nav-arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
     </nav>
 
-    <div class="mobile-menu-bottom" style="--i: 4">
+    <div class="mobile-menu-bottom" style="--i: 5">
       <a href="/contact" class="mobile-cta">Get a Quote</a>
       <div class="mobile-info">
         <a href="tel:9702812982">(970) 281-2982</a>
@@ -80,26 +100,38 @@
 </div>
 
 <script>
-  const toggle = document.getElementById('mobile-toggle');
-  const menu = document.getElementById('mobile-menu');
-  const header = document.getElementById('header');
+  function initHeader() {
+    const toggle = document.getElementById('mobile-toggle');
+    const menu = document.getElementById('mobile-menu');
+    const header = document.getElementById('header');
 
-  toggle?.addEventListener('click', () => {
-    const isOpen = menu?.classList.toggle('open');
-    toggle?.classList.toggle('active');
-    header?.classList.toggle('menu-open');
-    document.body.style.overflow = isOpen ? 'hidden' : '';
-  });
+    if (!toggle || toggle.dataset.headerInitialized === '1') return;
+    toggle.dataset.headerInitialized = '1';
 
-  // Close menu on nav link click
-  document.querySelectorAll('.mobile-nav-item, .mobile-cta').forEach(link => {
-    link.addEventListener('click', () => {
-      menu?.classList.remove('open');
-      toggle?.classList.remove('active');
-      header?.classList.remove('menu-open');
-      document.body.style.overflow = '';
+    toggle.addEventListener('click', () => {
+      const isOpen = menu?.classList.toggle('open');
+      toggle.classList.toggle('active');
+      header?.classList.toggle('menu-open');
+      document.body.style.overflow = isOpen ? 'hidden' : '';
     });
+
+    // Close menu on nav link click
+    document.querySelectorAll('.mobile-nav-item, .mobile-cta').forEach(link => {
+      link.addEventListener('click', () => {
+        menu?.classList.remove('open');
+        toggle.classList.remove('active');
+        header?.classList.remove('menu-open');
+        document.body.style.overflow = '';
+      });
+    });
+  }
+
+  // Reset body scroll lock before navigation, in case user clicks a link while the menu is open
+  document.addEventListener('astro:before-swap', () => {
+    document.body.style.overflow = '';
   });
+
+  document.addEventListener('astro:page-load', initHeader);
 </script>
 
 <style>
@@ -191,6 +223,65 @@
 
   .nav-link-dropdown:hover .chevron {
     transform: translateY(2px);
+  }
+
+  /* Right-side CTA group (Flash Deck badge + Get a Quote) */
+  .header-cta-group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  /* Flash Deck Nav Badge — matched in size to .cta-button */
+  .fd-nav-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 64px;
+    min-width: 168px;
+    padding: 0 20px;
+    background: transparent;
+    border: 1px solid #ffc50b;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.3s ease, border-color 0.3s ease;
+  }
+
+  .fd-nav-badge-logo {
+    height: 22px;
+    width: auto;
+    display: block;
+    transition: filter 0.3s ease;
+  }
+
+  .fd-nav-badge-cta {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #ffc50b;
+    line-height: 1;
+    transition: color 0.3s ease;
+  }
+
+  .fd-nav-badge:hover {
+    background: rgba(255, 197, 11, 0.08);
+    border-color: #ffc50b;
+  }
+
+  .fd-nav-badge:hover .fd-nav-badge-cta {
+    color: #fff;
+  }
+
+  .fd-nav-badge-tm {
+    font-size: 0.7em;
+    vertical-align: super;
+    letter-spacing: 0;
   }
 
   .cta-button {
@@ -300,12 +391,16 @@
       padding: 16px 24px;
     }
 
-    /* Hide desktop nav + CTA */
+    /* Hide desktop nav + CTA + Flash Deck badge (in mobile menu instead) */
     .nav {
       display: none;
     }
 
     .cta-button {
+      display: none;
+    }
+
+    .fd-nav-badge {
       display: none;
     }
 
@@ -444,6 +539,19 @@
     .mobile-nav-item:hover::before,
     .mobile-nav-item:active::before {
       width: 100%;
+    }
+
+    /* Flash Deck variant — yellow theming */
+    .mobile-nav-item--flashdeck .mobile-nav-number {
+      color: #ffc50b;
+    }
+
+    .mobile-nav-item--flashdeck .mobile-nav-text {
+      color: #ffc50b;
+    }
+
+    .mobile-nav-item--flashdeck::before {
+      background: #ffc50b;
     }
 
     .mobile-nav-number {

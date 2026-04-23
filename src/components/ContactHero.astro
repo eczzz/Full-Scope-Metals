@@ -52,13 +52,21 @@
 </section>
 
 <script>
-  document.querySelector('.strip-cta')?.addEventListener('click', (e) => {
-    e.preventDefault();
-    const target = document.querySelector('#contact-form');
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  });
+  function initContactHeroSmoothScroll() {
+    const trigger = document.querySelector<HTMLAnchorElement>('.strip-cta');
+    if (!trigger || trigger.dataset.stripCtaInitialized === '1') return;
+    trigger.dataset.stripCtaInitialized = '1';
+
+    trigger.addEventListener('click', (e) => {
+      e.preventDefault();
+      const target = document.querySelector('#contact-form');
+      if (target) {
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  }
+
+  document.addEventListener('astro:page-load', initContactHeroSmoothScroll);
 </script>
 
 <style>
