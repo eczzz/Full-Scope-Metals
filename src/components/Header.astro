@@ -100,38 +100,50 @@
 </div>
 
 <script>
-  function initHeader() {
-    const toggle = document.getElementById('mobile-toggle');
-    const menu = document.getElementById('mobile-menu');
-    const header = document.getElementById('header');
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu')?.classList.remove('open');
+    document.getElementById('mobile-toggle')?.classList.remove('active');
+    document.getElementById('header')?.classList.remove('menu-open');
+    document.body.style.overflow = '';
+  }
 
+  function initHeaderToggle() {
+    const toggle = document.getElementById('mobile-toggle');
     if (!toggle || toggle.dataset.headerInitialized === '1') return;
     toggle.dataset.headerInitialized = '1';
 
     toggle.addEventListener('click', () => {
+      // Re-query on every click — the mobile-menu element is outside the
+      // persistent header and gets swapped on each view-transition nav, so
+      // any reference captured at init time would be stale.
+      const menu = document.getElementById('mobile-menu');
+      const header = document.getElementById('header');
       const isOpen = menu?.classList.toggle('open');
       toggle.classList.toggle('active');
       header?.classList.toggle('menu-open');
       document.body.style.overflow = isOpen ? 'hidden' : '';
     });
+  }
 
-    // Close menu on nav link click
-    document.querySelectorAll('.mobile-nav-item, .mobile-cta').forEach(link => {
-      link.addEventListener('click', () => {
-        menu?.classList.remove('open');
-        toggle.classList.remove('active');
-        header?.classList.remove('menu-open');
-        document.body.style.overflow = '';
-      });
+  function initMobileMenuLinks() {
+    // Mobile menu items get replaced on each page nav, so re-attach here
+    document.querySelectorAll<HTMLElement>('.mobile-nav-item, .mobile-cta').forEach(link => {
+      if (link.dataset.mobileLinkInitialized === '1') return;
+      link.dataset.mobileLinkInitialized = '1';
+      link.addEventListener('click', closeMobileMenu);
     });
   }
 
-  // Reset body scroll lock before navigation, in case user clicks a link while the menu is open
-  document.addEventListener('astro:before-swap', () => {
-    document.body.style.overflow = '';
-  });
+  function initHeader() {
+    initHeaderToggle();
+    initMobileMenuLinks();
+  }
 
-  // Run immediately if DOM is ready, otherwise wait — covers initial load race
+  // Make sure menu is closed before navigating — the toggle button persists
+  // across view transitions, so its state must be reset explicitly.
+  document.addEventListener('astro:before-swap', closeMobileMenu);
+
+  // Initial load: run directly if DOM ready, else wait
   if (document.readyState !== 'loading') {
     initHeader();
   } else {
