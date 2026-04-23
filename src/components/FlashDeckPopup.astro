@@ -98,6 +98,11 @@
     }
   }
 
+  if (document.readyState !== 'loading') {
+    initFlashDeckPopup();
+  } else {
+    document.addEventListener('DOMContentLoaded', initFlashDeckPopup);
+  }
   document.addEventListener('astro:page-load', initFlashDeckPopup);
 </script>
 

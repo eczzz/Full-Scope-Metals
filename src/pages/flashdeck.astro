@@ -261,6 +261,11 @@ import Footer from '../components/Footer.astro';
     startAutoAdvance();
   }
 
+  if (document.readyState !== 'loading') {
+    initFlashDeckCarousel();
+  } else {
+    document.addEventListener('DOMContentLoaded', initFlashDeckCarousel);
+  }
   document.addEventListener('astro:page-load', initFlashDeckCarousel);
 </script>
 

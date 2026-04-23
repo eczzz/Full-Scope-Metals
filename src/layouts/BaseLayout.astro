@@ -31,7 +31,7 @@ const isFlashDeckPage = pathname === '/flashdeck' || pathname === '/flashdeck/';
     <link rel="apple-touch-icon" href="/favicon.png" />
     <ClientRouter />
     <title>{title}</title>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T37CW9Q39S"></script>
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-T37CW9Q39S"></script>
     <script is:inline>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
@@ -101,6 +101,11 @@ const isFlashDeckPage = pathname === '/flashdeck' || pathname === '/flashdeck/';
         document.querySelectorAll('.scroll-reveal:not(.revealed)').forEach(el => observer.observe(el));
       }
 
+      if (document.readyState !== 'loading') {
+        initScrollReveal();
+      } else {
+        document.addEventListener('DOMContentLoaded', initScrollReveal);
+      }
       document.addEventListener('astro:page-load', initScrollReveal);
     </script>
   </body>

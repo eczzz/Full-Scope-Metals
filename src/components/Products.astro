@@ -675,5 +675,10 @@
     });
   }
 
+  if (document.readyState !== 'loading') {
+    initProductDropdown();
+  } else {
+    document.addEventListener('DOMContentLoaded', initProductDropdown);
+  }
   document.addEventListener('astro:page-load', initProductDropdown);
 </script>

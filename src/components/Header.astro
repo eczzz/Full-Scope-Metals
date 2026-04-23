@@ -131,6 +131,12 @@
     document.body.style.overflow = '';
   });
 
+  // Run immediately if DOM is ready, otherwise wait — covers initial load race
+  if (document.readyState !== 'loading') {
+    initHeader();
+  } else {
+    document.addEventListener('DOMContentLoaded', initHeader);
+  }
   document.addEventListener('astro:page-load', initHeader);
 </script>
 

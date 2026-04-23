@@ -66,6 +66,11 @@
     });
   }
 
+  if (document.readyState !== 'loading') {
+    initContactHeroSmoothScroll();
+  } else {
+    document.addEventListener('DOMContentLoaded', initContactHeroSmoothScroll);
+  }
   document.addEventListener('astro:page-load', initContactHeroSmoothScroll);
 </script>
 
