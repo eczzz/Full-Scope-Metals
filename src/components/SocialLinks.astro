@@ -36,7 +36,7 @@ const { variant = "card", label } = Astro.props;
 
 <style>
   .social-links {
-    --social-hover: var(--blue-accent);
+    --social-hover: var(--blue-primary);
     display: flex;
     align-items: center;
     gap: 14px;
@@ -56,9 +56,14 @@ const { variant = "card", label } = Astro.props;
   }
 
   .social-icon {
-    color: var(--white);
+    color: var(--blue-accent);
     display: inline-flex;
     transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .social-icon svg {
+    width: 28px;
+    height: 28px;
   }
 
   .social-icon:hover {
@@ -79,8 +84,6 @@ const { variant = "card", label } = Astro.props;
 
   /* ===== Inline variant (sits in an info-row value slot) ===== */
   .social-inline {
-    /* Match the dark-blue hover used elsewhere in the Get in Touch card */
-    --social-hover: var(--blue-primary);
     gap: 0;
   }
 
@@ -105,8 +108,24 @@ const { variant = "card", label } = Astro.props;
 
   /* ===== Footer variant ===== */
   .social-footer .social-icon svg {
-    width: 26px;
-    height: 26px;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* ===== Menu variant (mobile menu) ===== */
+  .social-menu {
+    justify-content: center;
+    width: 100%;
+    gap: 28px;
+  }
+
+  .social-menu .social-icons {
+    gap: 28px;
+  }
+
+  .social-menu .social-icon svg {
+    width: 32px;
+    height: 32px;
   }
 
   /* On mobile the contact sidebar goes compact: label left, icons right */

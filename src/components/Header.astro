@@ -1,5 +1,5 @@
 ---
-
+import SocialLinks from "./SocialLinks.astro";
 ---
 
 <header class="header" id="header" transition:persist>
@@ -89,6 +89,9 @@
     </nav>
 
     <div class="mobile-menu-bottom" style="--i: 5">
+      <div class="mobile-social">
+        <SocialLinks variant="menu" />
+      </div>
       <a href="/contact" class="mobile-cta">Get a Quote</a>
       <div class="mobile-info">
         <a href="tel:9702812982">(970) 281-2982</a>
@@ -627,6 +630,10 @@
     .mobile-menu.open .mobile-menu-bottom {
       opacity: 1;
       transform: translateY(0);
+    }
+
+    .mobile-social {
+      margin-bottom: 28px;
     }
 
     .mobile-cta {
