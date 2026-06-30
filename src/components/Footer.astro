@@ -1,5 +1,5 @@
 ---
-
+import SocialLinks from "./SocialLinks.astro";
 ---
 
 <footer class="footer">
@@ -17,6 +17,9 @@
         />
         <p class="tagline">Metal Roofing Products <span class="headline-accent">Built for the Field.</span></p>
         <p class="subtext">Custom fabrication and distribution out of Kremmling, Colorado.</p>
+        <div class="footer-social">
+          <SocialLinks variant="footer" />
+        </div>
       </div>
 
       <!-- Right Column -->
@@ -118,6 +121,10 @@
     color: var(--white-muted);
     line-height: 150%;
     max-width: 500px;
+  }
+
+  .footer-social {
+    margin-top: 32px;
   }
 
   /* Right Column */

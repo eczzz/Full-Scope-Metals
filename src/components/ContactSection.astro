@@ -1,5 +1,5 @@
 ---
-
+import SocialLinks from "./SocialLinks.astro";
 ---
 
 <section class="contact-section" id="contact-form">
@@ -72,6 +72,19 @@
           <div class="info-text">
             <span class="info-label">Hours</span>
             <p class="info-value">Mon - Sat: 7:30A - 5:30P<br />Sun: Closed</p>
+          </div>
+        </div>
+
+        <div class="info-row info-row-social">
+          <svg class="info-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <circle cx="18" cy="5" r="3" stroke="#E8E8E8" stroke-width="2"/>
+            <circle cx="6" cy="12" r="3" stroke="#E8E8E8" stroke-width="2"/>
+            <circle cx="18" cy="19" r="3" stroke="#E8E8E8" stroke-width="2"/>
+            <path d="M8.59 13.51l6.83 3.98M15.41 6.51l-6.82 3.98" stroke="#E8E8E8" stroke-width="2"/>
+          </svg>
+          <div class="info-text">
+            <span class="info-label">Follow Us</span>
+            <SocialLinks variant="inline" />
           </div>
         </div>
       </div>
@@ -270,6 +283,10 @@
 
   .info-row:last-child {
     margin-bottom: 0;
+  }
+
+  .info-row-social .info-label {
+    margin-bottom: 8px;
   }
 
   .info-icon {

@@ -1,5 +1,5 @@
 ---
-
+import SocialLinks from "./SocialLinks.astro";
 ---
 
 <section class="contact-content" id="contact-form">
@@ -107,6 +107,13 @@
             </div>
             <span class="sidebar-label">Hours</span>
             <p class="sidebar-value">Mon - Sat: 7:30A - 5:30P<br />Sun: Closed</p>
+          </div>
+
+          <div class="sidebar-divider"></div>
+
+          <!-- Social -->
+          <div class="sidebar-block sidebar-social-block">
+            <SocialLinks variant="sidebar" label="Follow Us On Social" />
           </div>
 
           <!-- Turnaround badge -->
@@ -744,6 +751,14 @@
 
     .sidebar-divider {
       margin: 16px 0;
+    }
+
+    /* Social block opts out of the icon+text grid above — it has no leading
+       icon, so the 20px first column would crush the label and brand icons.
+       Lay it out as a simple full-width row instead. */
+    .sidebar-block.sidebar-social-block {
+      display: block !important;
+      padding: 0;
     }
 
     /* Badge repositioned: sits right under address, not buried at bottom.

@@ -1,0 +1,126 @@
+---
+// Reusable social media links (Instagram + Facebook).
+// variant controls layout/sizing per placement: "card" | "sidebar" | "footer"
+const { variant = "card", label } = Astro.props;
+---
+
+<div class={`social-links social-${variant}`}>
+  {label && <span class="social-label">{label}</span>}
+  <div class="social-icons">
+    <a
+      href="https://www.instagram.com/fullscopemetals/"
+      target="_blank"
+      rel="noopener"
+      class="social-icon"
+      aria-label="Full Scope Metals on Instagram"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <rect x="2" y="2" width="20" height="20" rx="5" stroke="currentColor" stroke-width="2"/>
+        <circle cx="12" cy="12" r="4.5" stroke="currentColor" stroke-width="2"/>
+        <circle cx="17.5" cy="6.5" r="1.3" fill="currentColor"/>
+      </svg>
+    </a>
+    <a
+      href="https://www.facebook.com/FullScopeMetals"
+      target="_blank"
+      rel="noopener"
+      class="social-icon"
+      aria-label="Full Scope Metals on Facebook"
+    >
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <path d="M22 12a10 10 0 10-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0022 12z" fill="currentColor"/>
+      </svg>
+    </a>
+  </div>
+</div>
+
+<style>
+  .social-links {
+    --social-hover: var(--blue-accent);
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .social-label {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--white);
+  }
+
+  .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .social-icon {
+    color: var(--white);
+    display: inline-flex;
+    transition: color 0.3s cubic-bezier(0.25, 0.1, 0.25, 1), transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .social-icon:hover {
+    color: var(--social-hover);
+    transform: translateY(-2px);
+  }
+
+  /* ===== Card variant (Get in Touch box) ===== */
+  .social-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .social-card .social-label {
+    font-size: 15px;
+  }
+
+  /* ===== Inline variant (sits in an info-row value slot) ===== */
+  .social-inline {
+    /* Match the dark-blue hover used elsewhere in the Get in Touch card */
+    --social-hover: var(--blue-primary);
+    gap: 0;
+  }
+
+  .social-inline .social-icons {
+    gap: 16px;
+  }
+
+  /* ===== Sidebar variant (Contact page) ===== */
+  .social-sidebar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .social-sidebar .social-label {
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+    color: var(--white-muted);
+  }
+
+  /* ===== Footer variant ===== */
+  .social-footer .social-icon svg {
+    width: 26px;
+    height: 26px;
+  }
+
+  /* On mobile the contact sidebar goes compact: label left, icons right */
+  @media (max-width: 768px) {
+    .social-sidebar {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+    }
+
+    .social-sidebar .social-label {
+      font-size: 12px;
+      margin: 0;
+    }
+  }
+</style>
